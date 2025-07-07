@@ -1,0 +1,6 @@
+2025-07-06 17:59:48,762 - __main__ - INFO - Starting Telegram bot...
+2025-07-06 17:59:48,848 - __main__ - INFO - Python version: 3.13.4 (tags/v3.13.4:8a526ec, Jun  3 2025, 17:46:04) [MSC v.1943 64 bit (AMD64)], Dependencies: requests=2.32.4, pandas=2.3.0, solders=0.26.0, telegram=22.2, backoff=2.2.1
+2025-07-06 18:00:21,829 - __main__ - INFO - Bot started for chat ID: **
+2025-07-06 18:10:10,807 - __main__ - INFO - Scanning tokens at 2025-07-06 17:10:10 UTC, CHAT_ID: **
+2025-07-06 18:10:10,814 - __main__ - INFO - Cleared cache. OHLCV_CACHE: 0, TOKEN_CACHE: 0, PROCESSED_TOKENS: 0
+2025-07-06 18:10:10,818 - __main__ - INFO - Testing Birdeye with FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump
