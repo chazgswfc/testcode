@@ -1,0 +1,560 @@
+CMD console: -
+
+2025-07-06 17:59:48,762 - __main__ - INFO - Starting Telegram bot...
+2025-07-06 17:59:48,848 - __main__ - INFO - Python version: 3.13.4 (tags/v3.13.4:8a526ec, Jun  3 2025, 17:46:04) [MSC v.1943 64 bit (AMD64)], Dependencies: requests=2.32.4, pandas=2.3.0, solders=0.26.0, telegram=22.2, backoff=2.2.1
+2025-07-06 18:00:21,829 - __main__ - INFO - Bot started for chat ID: 7525494318
+2025-07-06 18:10:10,807 - __main__ - INFO - Scanning tokens at 2025-07-06 17:10:10 UTC, CHAT_ID: 7525494318
+2025-07-06 18:10:10,814 - __main__ - INFO - Cleared cache. OHLCV_CACHE: 0, TOKEN_CACHE: 0, PROCESSED_TOKENS: 0
+2025-07-06 18:10:10,818 - __main__ - INFO - Testing Birdeye with FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump
+2025-07-06 18:10:11,513 - __main__ - DEBUG - Birdeye token security for FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump: status=200, body={"data":{"creatorAddress":"9XJjzWDfCbRowSrzcjaEu57FG8Fq1XM2ibsTpsXKh9tH","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"4CbCTxLZR3sjqu3uVESE1cvAgNdQwAGpWa1GCm1
+2025-07-06 18:10:11,692 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump, response_code=200
+2025-07-06 18:10:11,720 - __main__ - INFO - Metadata for FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump: time=1751550254, symbol=Unknown, name=Unknown
+2025-07-06 18:10:11,723 - __main__ - INFO - Test metadata: {'mint_time': 1751550254, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821811.7206666}
+2025-07-06 18:10:12,014 - __main__ - INFO - Birdeye OHLCV request: https://public-api.birdeye.so/defi/v3/ohlcv?address=FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump&type=5m&time_from=1751811011&time_to=1751821811, response_code=200
+2025-07-06 18:10:12,439 - __main__ - DEBUG - OHLCV sample for FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump: {'timestamp': {13: 1751820900, 14: 1751821200}, 'o': {13: 1.2637955587481388e-05, 14: 1.2783989377700722e-05}, 'h': {13: 1.2783989377700722e-05, 14: 1.2921681515058707e-05}, 'l': {13: 1.244417547941424e-05, 14: 1.2783989377700722e-05}, 'c': {13: 1.2783989377700722e-05, 14: 1.2921681515058707e-05}, 'volume': {13: 17471590.712438002, 14: 35201.129051}}
+2025-07-06 18:10:12,443 - __main__ - DEBUG - OHLCV processed for FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump: 15 rows
+2025-07-06 18:10:12,449 - __main__ - INFO - Test OHLCV rows: 15
+2025-07-06 18:10:12,758 - __main__ - INFO - Birdeye price request: https://public-api.birdeye.so/defi/price?address=FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump, response_code=200
+2025-07-06 18:10:12,906 - __main__ - DEBUG - Indicators for FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump: MFI=0           NaN
+1           NaN
+2           NaN
+3           NaN
+4           NaN
+5           NaN
+6           NaN
+7           NaN
+8           NaN
+9           NaN
+10          NaN
+11          NaN
+12          NaN
+13    50.207589
+14    50.232133
+dtype: float64, RVI=-0.05702536271891412, RVI_signal=-0.3277032733982104
+2025-07-06 18:10:12,909 - __main__ - ERROR - Error processing test token FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump: 'NoneType' object has no attribute 'empty'
+Traceback (most recent call last):
+  File "c:\Users\Chaz\Documents\Newbot57.py", line 545, in scan_volume_tokens
+    mfi, (rvi, rvi_signal), (macd, macd_signal) = calculate_indicators(test_mint)
+                                                  ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\Chaz\Documents\Newbot57.py", line 383, in calculate_indicators
+    (macd, macd_signal) if not macd.empty else (None, None)
+                               ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'empty'
+2025-07-06 18:10:12,983 - __main__ - INFO - Testing Birdeye with 9kW58Uj1U7kA3r3e3qV6z3z3
+2025-07-06 18:10:13,172 - __main__ - DEBUG - Birdeye token security for 9kW58Uj1U7kA3r3e3qV6z3z3: status=400, body={"success":false,"message":"address is invalid format"}
+2025-07-06 18:10:13,178 - __main__ - WARNING - Token security failed for 9kW58Uj1U7kA3r3e3qV6z3z3: {"success":false,"message":"address is invalid format"}
+2025-07-06 18:10:13,341 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9kW58Uj1U7kA3r3e3qV6z3z3, response_code=400
+2025-07-06 18:10:14,042 - __main__ - INFO - Dexscreener request: https://api.dexscreener.com/latest/dex/tokens/9kW58Uj1U7kA3r3e3qV6z3z3, response_code=200
+2025-07-06 18:10:14,050 - __main__ - WARNING - No Dexscreener pairs for 9kW58Uj1U7kA3r3e3qV6z3z3
+2025-07-06 18:10:14,053 - __main__ - WARNING - No mint time for 9kW58Uj1U7kA3r3e3qV6z3z3
+2025-07-06 18:10:14,062 - __main__ - INFO - Metadata for 9kW58Uj1U7kA3r3e3qV6z3z3: time=None, symbol=Unknown, name=Unknown
+2025-07-06 18:10:14,069 - __main__ - INFO - Test metadata: {'mint_time': None, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821814.062238}
+2025-07-06 18:10:14,323 - __main__ - INFO - Birdeye OHLCV request: https://public-api.birdeye.so/defi/v3/ohlcv?address=9kW58Uj1U7kA3r3e3qV6z3z3&type=5m&time_from=1751811014&time_to=1751821814, response_code=400
+2025-07-06 18:10:14,325 - __main__ - WARNING - OHLCV error for 9kW58Uj1U7kA3r3e3qV6z3z3: status=400, response={"success":false,"message":"address is invalid format"}
+2025-07-06 18:10:14,332 - __main__ - INFO - Test indicators for 9kW58Uj1U7kA3r3e3qV6z3z3: MFI=None, RVI=None, RVI_signal=None, Volume_1h=$0.00, Volume_24h=$0.00
+2025-07-06 18:10:14,333 - __main__ - INFO - Fetching new and trending tokens from Birdeye at 2025-07-06 17:10:14 UTC
+2025-07-06 18:10:15,388 - __main__ - INFO - Birdeye new listings request: https://public-api.birdeye.so/defi/v2/tokens/new_listing?chain=solana&offset=0&limit=20, response_code=200
+2025-07-06 18:10:15,415 - __main__ - DEBUG - Raw new listings response: {'success': True, 'data': {'items': [{'address': 'EjHEyFGz8Rv9r1rcdFa1hGhQMjcswwv5tf2yZW8BFpyT', 'symbol': 'GOR', 'name': 'Gorbagana', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:10:08', 'logoURI': 'https://images.weserv.nl/?url=https://upward-sport-headed.quicknode-ipfs.com/ipfs/QmQAtMVZPjsfaTJM9QErBdVqHi1bD9FCBZDr5uzGV96zhU', 'liquidity': 1259.8327189885035}, {'address': '2QegNG2Sz7zskM4wcescztH2cNjjUEZqGMaEds3uFBLQ', 'symbol': 'BIF Party', 'name': 'BonkwifAmerica', 'decimals': 6, 'source': 'pump_amm', 'liquidityAddedAt': '2025-07-06T17:10:07', 'logoURI': 'https://ipfs.io/ipfs/bafkreicaubouge474afjn2ut4gvlcleej23koc6re44fuycpwrn5gm3dju', 'liquidity': 67060.5786713016}, {'address': 'Ft5TqLk1FWkBjBqAcr88LEkvM84mYBYqAKtfhevN2GFd', 'symbol': 'XBN', 'name': 'Xbn', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:10:07', 'logoURI': 'https://images.weserv.nl/?url=https://ipfs.io/ipfs/QmbfDJZZJ63mf1qXR2hryYgibZpSFQZ33a842cS
+2025-07-06 18:10:15,437 - __main__ - DEBUG - New listings tokens: [{'address': 'EjHEyFGz8Rv9r1rcdFa1hGhQMjcswwv5tf2yZW8BFpyT', 'symbol': 'GOR', 'name': 'Gorbagana', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:10:08', 'logoURI': 'https://images.weserv.nl/?url=https://upward-sport-headed.quicknode-ipfs.com/ipfs/QmQAtMVZPjsfaTJM9QErBdVqHi1bD9FCBZDr5uzGV96zhU', 'liquidity': 1259.8327189885035}, {'address': '2QegNG2Sz7zskM4wcescztH2cNjjUEZqGMaEds3uFBLQ', 'symbol': 'BIF Party', 'name': 'BonkwifAmerica', 'decimals': 6, 'source': 'pump_amm', 'liquidityAddedAt': '2025-07-06T17:10:07', 'logoURI': 'https://ipfs.io/ipfs/bafkreicaubouge474afjn2ut4gvlcleej23koc6re44fuycpwrn5gm3dju', 'liquidity': 67060.5786713016}]
+2025-07-06 18:10:15,445 - __main__ - INFO - Retrieved 20 new listings
+2025-07-06 18:10:15,448 - __main__ - INFO - Processing 20 new listings
+2025-07-06 18:10:15,666 - __main__ - INFO - Birdeye trending tokens request: https://public-api.birdeye.so/defi/token_trending?chain=solana&sort_by=volume24hUSD&sort_type=desc&offset=0&limit=20, response_code=200
+2025-07-06 18:10:15,669 - __main__ - DEBUG - Raw trending tokens response: {'data': {'updateUnixTime': 1751821819, 'updateTime': '2025-07-06T17:10:19', 'tokens': [{'address': 'DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263', 'decimals': 5, 'liquidity': 13991049.574885, 'logoURI': 'https://arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I', 'name': 'Bonk', 'symbol': 'Bonk', 'volume24hUSD': 43492397.96290155, 'volume24hChangePercent': 56.06717665789947, 'fdv': 1989930966.2858043, 'marketcap': 1989930966.2858043, 'rank': 1, 'price': 2.2410139027138845e-05, 'price24hChangePercent': 20.43644021390247}, {'address': '5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi', 'decimals': 6, 'liquidity': 72117.053482576, 'logoURI': 'https://ipfs.io/ipfs/bafybeiarof6sisscce2anqccr4ncgnrxob2b23yoeoeuee4lo7iyp2y74e', 'name': 'Real Asian Hours', 'symbol': 'CHINAWINS', 'volume24hUSD': 24997818.905027397, 'volume24hChangePercent': None, 'fdv': 489008.61787172453, 'marketcap': 489008.61787172453, 'rank': 114, 'price': 0.0004890086556276726, 'price24hChangePercent': 235.8615882732725
+2025-07-06 18:10:15,674 - __main__ - DEBUG - Trending tokens: [{'address': 'DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263', 'decimals': 5, 'liquidity': 13991049.574885, 'logoURI': 'https://arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I', 'name': 'Bonk', 'symbol': 'Bonk', 'volume24hUSD': 43492397.96290155, 'volume24hChangePercent': 56.06717665789947, 'fdv': 1989930966.2858043, 'marketcap': 1989930966.2858043, 'rank': 1, 'price': 2.2410139027138845e-05, 'price24hChangePercent': 20.43644021390247}, {'address': '5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi', 'decimals': 6, 'liquidity': 72117.053482576, 'logoURI': 'https://ipfs.io/ipfs/bafybeiarof6sisscce2anqccr4ncgnrxob2b23yoeoeuee4lo7iyp2y74e', 'name': 'Real Asian Hours', 'symbol': 'CHINAWINS', 'volume24hUSD': 24997818.905027397, 'volume24hChangePercent': None, 'fdv': 489008.61787172453, 'marketcap': 489008.61787172453, 'rank': 114, 'price': 0.0004890086556276726, 'price24hChangePercent': 235.8615882732725}]
+2025-07-06 18:10:15,676 - __main__ - INFO - Retrieved 20 trending tokens with sort_by=volume24hUSD
+2025-07-06 18:10:15,679 - __main__ - INFO - Processing 20 trending tokens
+2025-07-06 18:10:15,687 - __main__ - INFO - Total tokens to process: 40
+2025-07-06 18:10:15,689 - __main__ - DEBUG - Processing token: {'address': 'EjHEyFGz8Rv9r1rcdFa1hGhQMjcswwv5tf2yZW8BFpyT', 'symbol': 'GOR', 'name': 'Gorbagana', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:10:08', 'logoURI': 'https://images.weserv.nl/?url=https://upward-sport-headed.quicknode-ipfs.com/ipfs/QmQAtMVZPjsfaTJM9QErBdVqHi1bD9FCBZDr5uzGV96zhU', 'liquidity': 1259.8327189885035}
+2025-07-06 18:10:15,690 - __main__ - DEBUG - Token address: EjHEyFGz8Rv9r1rcdFa1hGhQMjcswwv5tf2yZW8BFpyT
+2025-07-06 18:10:15,875 - __main__ - DEBUG - Birdeye token security for EjHEyFGz8Rv9r1rcdFa1hGhQMjcswwv5tf2yZW8BFpyT: status=555, body={"success":false,"message":"Bad request"}
+2025-07-06 18:10:15,881 - __main__ - WARNING - Token security failed for EjHEyFGz8Rv9r1rcdFa1hGhQMjcswwv5tf2yZW8BFpyT: {"success":false,"message":"Bad request"}
+2025-07-06 18:10:16,069 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=EjHEyFGz8Rv9r1rcdFa1hGhQMjcswwv5tf2yZW8BFpyT, response_code=200
+2025-07-06 18:10:16,073 - __main__ - INFO - Metadata for EjHEyFGz8Rv9r1rcdFa1hGhQMjcswwv5tf2yZW8BFpyT: time=1751821808, symbol=Unknown, name=Unknown
+2025-07-06 18:10:16,078 - __main__ - DEBUG - Metadata for EjHEyFGz8Rv9r1rcdFa1hGhQMjcswwv5tf2yZW8BFpyT: {'mint_time': 1751821808, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821816.0735}
+2025-07-06 18:10:16,079 - __main__ - DEBUG - Trade created for EjHEyFGz8Rv9r1rcdFa1hGhQMjcswwv5tf2yZW8BFpyT
+2025-07-06 18:10:16,081 - __main__ - DEBUG - Processing token: {'address': '2QegNG2Sz7zskM4wcescztH2cNjjUEZqGMaEds3uFBLQ', 'symbol': 'BIF Party', 'name': 'BonkwifAmerica', 'decimals': 6, 'source': 'pump_amm', 'liquidityAddedAt': '2025-07-06T17:10:07', 'logoURI': 'https://ipfs.io/ipfs/bafkreicaubouge474afjn2ut4gvlcleej23koc6re44fuycpwrn5gm3dju', 'liquidity': 67060.5786713016}
+2025-07-06 18:10:16,083 - __main__ - DEBUG - Token address: 2QegNG2Sz7zskM4wcescztH2cNjjUEZqGMaEds3uFBLQ
+2025-07-06 18:10:16,291 - __main__ - DEBUG - Birdeye token security for 2QegNG2Sz7zskM4wcescztH2cNjjUEZqGMaEds3uFBLQ: status=200, body={"data":{"creatorAddress":"D8YCeL7BYx43AcBAhTDcW9VhefeQTmqzzg6WHpkiNSQA","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"7EU27P5S1bFqtpFwBLZuHcvBT4Z9ciWfnf8i2ST
+2025-07-06 18:10:16,442 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=2QegNG2Sz7zskM4wcescztH2cNjjUEZqGMaEds3uFBLQ, response_code=200
+2025-07-06 18:10:16,444 - __main__ - INFO - Metadata for 2QegNG2Sz7zskM4wcescztH2cNjjUEZqGMaEds3uFBLQ: time=1751821768, symbol=Unknown, name=Unknown
+2025-07-06 18:10:16,450 - __main__ - DEBUG - Metadata for 2QegNG2Sz7zskM4wcescztH2cNjjUEZqGMaEds3uFBLQ: {'mint_time': 1751821768, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821816.4446468}
+2025-07-06 18:10:16,452 - __main__ - DEBUG - Trade created for 2QegNG2Sz7zskM4wcescztH2cNjjUEZqGMaEds3uFBLQ
+2025-07-06 18:10:16,453 - __main__ - DEBUG - Processing token: {'address': 'Ft5TqLk1FWkBjBqAcr88LEkvM84mYBYqAKtfhevN2GFd', 'symbol': 'XBN', 'name': 'Xbn', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:10:07', 'logoURI': 'https://images.weserv.nl/?url=https://ipfs.io/ipfs/QmbfDJZZJ63mf1qXR2hryYgibZpSFQZ33a842cS4Qzf9hk', 'liquidity': 769.8339892481422}
+2025-07-06 18:10:16,455 - __main__ - DEBUG - Token address: Ft5TqLk1FWkBjBqAcr88LEkvM84mYBYqAKtfhevN2GFd
+2025-07-06 18:10:16,671 - __main__ - DEBUG - Birdeye token security for Ft5TqLk1FWkBjBqAcr88LEkvM84mYBYqAKtfhevN2GFd: status=555, body={"success":false,"message":"Bad request"}
+2025-07-06 18:10:16,672 - __main__ - WARNING - Token security failed for Ft5TqLk1FWkBjBqAcr88LEkvM84mYBYqAKtfhevN2GFd: {"success":false,"message":"Bad request"}
+2025-07-06 18:10:16,888 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=Ft5TqLk1FWkBjBqAcr88LEkvM84mYBYqAKtfhevN2GFd, response_code=200
+2025-07-06 18:10:16,901 - __main__ - INFO - Metadata for Ft5TqLk1FWkBjBqAcr88LEkvM84mYBYqAKtfhevN2GFd: time=1751821807, symbol=Unknown, name=Unknown
+2025-07-06 18:10:16,917 - __main__ - DEBUG - Metadata for Ft5TqLk1FWkBjBqAcr88LEkvM84mYBYqAKtfhevN2GFd: {'mint_time': 1751821807, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821816.900936}
+2025-07-06 18:10:16,920 - __main__ - DEBUG - Trade created for Ft5TqLk1FWkBjBqAcr88LEkvM84mYBYqAKtfhevN2GFd
+2025-07-06 18:10:16,924 - __main__ - DEBUG - Processing token: {'address': '9agVHTz9c12P9hGtq3zPCT83fzGKouxp5TiUftDxbonk', 'symbol': 'Bonk Wick', 'name': 'Bonk Wick', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:10:03', 'logoURI': 'https://ipfs.io/ipfs/bafybeiekqbomo4k56ojiteymclchmtpefdbythag5pqogued4gupi3ncey', 'liquidity': 547.762999419677}
+2025-07-06 18:10:16,928 - __main__ - DEBUG - Token address: 9agVHTz9c12P9hGtq3zPCT83fzGKouxp5TiUftDxbonk
+2025-07-06 18:10:17,146 - __main__ - DEBUG - Birdeye token security for 9agVHTz9c12P9hGtq3zPCT83fzGKouxp5TiUftDxbonk: status=555, body={"success":false,"message":"Bad request"}
+2025-07-06 18:10:17,148 - __main__ - WARNING - Token security failed for 9agVHTz9c12P9hGtq3zPCT83fzGKouxp5TiUftDxbonk: {"success":false,"message":"Bad request"}
+2025-07-06 18:10:17,322 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9agVHTz9c12P9hGtq3zPCT83fzGKouxp5TiUftDxbonk, response_code=200
+2025-07-06 18:10:17,330 - __main__ - INFO - Metadata for 9agVHTz9c12P9hGtq3zPCT83fzGKouxp5TiUftDxbonk: time=1751821801, symbol=Unknown, name=Unknown
+2025-07-06 18:10:17,335 - __main__ - DEBUG - Metadata for 9agVHTz9c12P9hGtq3zPCT83fzGKouxp5TiUftDxbonk: {'mint_time': 1751821801, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821817.3305142}
+2025-07-06 18:10:17,338 - __main__ - DEBUG - Trade created for 9agVHTz9c12P9hGtq3zPCT83fzGKouxp5TiUftDxbonk
+2025-07-06 18:10:17,361 - __main__ - DEBUG - Processing token: {'address': 'CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk', 'symbol': 'Bonk2', 'name': 'Bonk2', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:10:02', 'logoURI': 'https://ipfs.io/ipfs/bafkreia5cxljk6vucvjdbzhp6hbuectz4nkut3i4fahe2llyt6cv6wyz4q', 'liquidity': 1118.0282452068338}
+2025-07-06 18:10:17,362 - __main__ - DEBUG - Token address: CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk
+2025-07-06 18:10:17,589 - __main__ - DEBUG - Birdeye token security for CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk: status=555, body={"success":false,"message":"Bad request"}
+2025-07-06 18:10:17,590 - __main__ - WARNING - Token security failed for CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk: {"success":false,"message":"Bad request"}
+2025-07-06 18:10:17,796 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk, response_code=200
+2025-07-06 18:10:17,821 - __main__ - INFO - Metadata for CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk: time=1751821801, symbol=Unknown, name=Unknown
+2025-07-06 18:10:17,826 - __main__ - DEBUG - Metadata for CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk: {'mint_time': 1751821801, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821817.8217235}
+2025-07-06 18:10:17,831 - __main__ - DEBUG - Trade created for CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk
+2025-07-06 18:10:17,832 - __main__ - DEBUG - Processing token: {'address': 'DNkcjSFic3G3BfczmKBgZYPooXLEW1tGUVpjFxXbffQc', 'symbol': 'SHIB', 'name': 'Shiba Inu', 'decimals': 6, 'source': 'meteora_dlmm', 'liquidityAddedAt': '2025-07-06T17:10:02', 'logoURI': 'https://gateway.irys.xyz/SSwHQElOM-b81vO2ko7bVPBITmplb8K0tc5srkcsS90', 'liquidity': 0}
+2025-07-06 18:10:17,834 - __main__ - DEBUG - Token address: DNkcjSFic3G3BfczmKBgZYPooXLEW1tGUVpjFxXbffQc
+2025-07-06 18:10:18,053 - __main__ - DEBUG - Birdeye token security for DNkcjSFic3G3BfczmKBgZYPooXLEW1tGUVpjFxXbffQc: status=200, body={"data":{"creatorAddress":"CEmBg7xMhmC9c5LkF2dPkwEMsTYQvdh89thg8iPgH6op","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"T1FeXrooU5XBt9ApVMsVBaUeCNhS8Do3FFJg13H
+2025-07-06 18:10:18,247 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=DNkcjSFic3G3BfczmKBgZYPooXLEW1tGUVpjFxXbffQc, response_code=200
+2025-07-06 18:10:18,257 - __main__ - INFO - Metadata for DNkcjSFic3G3BfczmKBgZYPooXLEW1tGUVpjFxXbffQc: time=1751820737, symbol=Unknown, name=Unknown
+2025-07-06 18:10:18,262 - __main__ - DEBUG - Metadata for DNkcjSFic3G3BfczmKBgZYPooXLEW1tGUVpjFxXbffQc: {'mint_time': 1751820737, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821818.2577002}
+2025-07-06 18:10:18,265 - __main__ - DEBUG - Trade created for DNkcjSFic3G3BfczmKBgZYPooXLEW1tGUVpjFxXbffQc
+2025-07-06 18:10:18,268 - __main__ - DEBUG - Processing token: {'address': 'CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk', 'symbol': 'Bonk2', 'name': 'Bonk2', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:10:01', 'logoURI': 'https://ipfs.io/ipfs/bafkreia5cxljk6vucvjdbzhp6hbuectz4nkut3i4fahe2llyt6cv6wyz4q', 'liquidity': 1118.0282452068338}
+2025-07-06 18:10:18,271 - __main__ - DEBUG - Token address: CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk
+2025-07-06 18:10:18,274 - __main__ - DEBUG - Skipping token CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk: already processed
+2025-07-06 18:10:18,286 - __main__ - DEBUG - Processing token: {'address': 'FAiNXud91wVKBeDheTsY36bta9p6rCDDWDQmQvtL66Ph', 'symbol': 'XBK', 'name': 'XBK', 'decimals': 6, 'source': 'fluxbeam', 'liquidityAddedAt': '2025-07-06T17:10:01', 'logoURI': 'https://images.weserv.nl/?url=https://ipfs.io/ipfs/bafybeianhodjl5g2sssbv57u4deamsmgkw3wn6allikego6iv24b7q2hlm', 'liquidity': 3048.2081214227996}
+2025-07-06 18:10:18,289 - __main__ - DEBUG - Token address: FAiNXud91wVKBeDheTsY36bta9p6rCDDWDQmQvtL66Ph
+2025-07-06 18:10:18,482 - __main__ - DEBUG - Birdeye token security for FAiNXud91wVKBeDheTsY36bta9p6rCDDWDQmQvtL66Ph: status=555, body={"success":false,"message":"Bad request"}
+2025-07-06 18:10:18,482 - __main__ - WARNING - Token security failed for FAiNXud91wVKBeDheTsY36bta9p6rCDDWDQmQvtL66Ph: {"success":false,"message":"Bad request"}
+2025-07-06 18:10:18,691 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=FAiNXud91wVKBeDheTsY36bta9p6rCDDWDQmQvtL66Ph, response_code=200
+2025-07-06 18:10:18,700 - __main__ - INFO - Metadata for FAiNXud91wVKBeDheTsY36bta9p6rCDDWDQmQvtL66Ph: time=1751821771, symbol=Unknown, name=Unknown
+2025-07-06 18:10:18,705 - __main__ - DEBUG - Metadata for FAiNXud91wVKBeDheTsY36bta9p6rCDDWDQmQvtL66Ph: {'mint_time': 1751821771, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821818.7006145}
+2025-07-06 18:10:18,709 - __main__ - DEBUG - Trade created for FAiNXud91wVKBeDheTsY36bta9p6rCDDWDQmQvtL66Ph
+2025-07-06 18:10:18,717 - __main__ - DEBUG - Processing token: {'address': '3qv6HmG7XJfqXffZZi2YYmmmKsPuKy2wnxGL1Vdxbonk', 'symbol': '', 'name': '', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:09:59', 'logoURI': 'https://ipfs.io/ipfs/bafkreibuipbbdml3lw6rxwzoyngsjpunoodc2xt5ip4h5htmn2lshotptm', 'liquidity': 1093.7387100508727}
+2025-07-06 18:10:18,720 - __main__ - DEBUG - Token address: 3qv6HmG7XJfqXffZZi2YYmmmKsPuKy2wnxGL1Vdxbonk
+2025-07-06 18:10:18,963 - __main__ - DEBUG - Birdeye token security for 3qv6HmG7XJfqXffZZi2YYmmmKsPuKy2wnxGL1Vdxbonk: status=555, body={"success":false,"message":"Bad request"}
+2025-07-06 18:10:18,963 - __main__ - WARNING - Token security failed for 3qv6HmG7XJfqXffZZi2YYmmmKsPuKy2wnxGL1Vdxbonk: {"success":false,"message":"Bad request"}
+2025-07-06 18:10:19,163 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=3qv6HmG7XJfqXffZZi2YYmmmKsPuKy2wnxGL1Vdxbonk, response_code=200
+2025-07-06 18:10:19,172 - __main__ - INFO - Metadata for 3qv6HmG7XJfqXffZZi2YYmmmKsPuKy2wnxGL1Vdxbonk: time=1751821799, symbol=Unknown, name=Unknown
+2025-07-06 18:10:19,177 - __main__ - DEBUG - Metadata for 3qv6HmG7XJfqXffZZi2YYmmmKsPuKy2wnxGL1Vdxbonk: {'mint_time': 1751821799, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821819.1723979}
+2025-07-06 18:10:19,181 - __main__ - DEBUG - Trade created for 3qv6HmG7XJfqXffZZi2YYmmmKsPuKy2wnxGL1Vdxbonk
+2025-07-06 18:10:19,184 - __main__ - DEBUG - Processing token: {'address': '5UHyMuQbXaqcMoCzbjyKRR2KrxUevgHKejL6xSiSbonk', 'symbol': 'SquidBonk', 'name': 'SquidBonk', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:09:59', 'logoURI': 'https://ipfs.io/ipfs/bafybeieuycrc46vxz5pgpzlmsdcirqtaxspkhu6j6sj6zdjocvfbu7573y', 'liquidity': 725.4735328986263}
+2025-07-06 18:10:19,187 - __main__ - DEBUG - Token address: 5UHyMuQbXaqcMoCzbjyKRR2KrxUevgHKejL6xSiSbonk
+2025-07-06 18:10:19,408 - __main__ - DEBUG - Birdeye token security for 5UHyMuQbXaqcMoCzbjyKRR2KrxUevgHKejL6xSiSbonk: status=555, body={"success":false,"message":"Bad request"}
+2025-07-06 18:10:19,409 - __main__ - WARNING - Token security failed for 5UHyMuQbXaqcMoCzbjyKRR2KrxUevgHKejL6xSiSbonk: {"success":false,"message":"Bad request"}
+2025-07-06 18:10:19,583 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=5UHyMuQbXaqcMoCzbjyKRR2KrxUevgHKejL6xSiSbonk, response_code=200
+2025-07-06 18:10:19,585 - __main__ - INFO - Metadata for 5UHyMuQbXaqcMoCzbjyKRR2KrxUevgHKejL6xSiSbonk: time=1751821799, symbol=Unknown, name=Unknown
+2025-07-06 18:10:19,592 - __main__ - DEBUG - Metadata for 5UHyMuQbXaqcMoCzbjyKRR2KrxUevgHKejL6xSiSbonk: {'mint_time': 1751821799, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821819.585679}
+2025-07-06 18:10:19,593 - __main__ - DEBUG - Trade created for 5UHyMuQbXaqcMoCzbjyKRR2KrxUevgHKejL6xSiSbonk
+2025-07-06 18:10:19,595 - __main__ - DEBUG - Processing token: {'address': '9XuTvmoMzmXUuU7eAvUdeo1v1vRG2Rm1E9seFFWqbonk', 'symbol': 'benk', 'name': 'benk', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:09:49', 'logoURI': 'https://ipfs.io/ipfs/bafkreihbdzbtn6bd33bxscy5tdrpvantj3rpt6aaazvxf4fso7msl3hvqa', 'liquidity': 810.0917903493232}
+2025-07-06 18:10:19,597 - __main__ - DEBUG - Token address: 9XuTvmoMzmXUuU7eAvUdeo1v1vRG2Rm1E9seFFWqbonk
+2025-07-06 18:10:19,860 - __main__ - DEBUG - Birdeye token security for 9XuTvmoMzmXUuU7eAvUdeo1v1vRG2Rm1E9seFFWqbonk: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"2rZ61QZaqMhj3GSWDsZbLeYEtA6LQxeeRbYCgwLw
+2025-07-06 18:10:20,113 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9XuTvmoMzmXUuU7eAvUdeo1v1vRG2Rm1E9seFFWqbonk, response_code=200
+2025-07-06 18:10:20,116 - __main__ - INFO - Metadata for 9XuTvmoMzmXUuU7eAvUdeo1v1vRG2Rm1E9seFFWqbonk: time=1751821789, symbol=Unknown, name=Unknown
+2025-07-06 18:10:20,123 - __main__ - DEBUG - Metadata for 9XuTvmoMzmXUuU7eAvUdeo1v1vRG2Rm1E9seFFWqbonk: {'mint_time': 1751821789, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821820.116319}
+2025-07-06 18:10:20,124 - __main__ - DEBUG - Trade created for 9XuTvmoMzmXUuU7eAvUdeo1v1vRG2Rm1E9seFFWqbonk
+2025-07-06 18:10:20,126 - __main__ - DEBUG - Processing token: {'address': 'C6Pq772RCWbD4n2cx3LMWprWBvhKQoKLVPWYifoCbonk', 'symbol': 'Bonkrupt', 'name': 'Bonkrupt', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:09:49', 'logoURI': 'https://ipfs.io/ipfs/bafkreidm65cke6sskuj7s5u2j3szf3odtgwwn464m7ftletxuckl3ew2ry', 'liquidity': 548.677461856104}
+2025-07-06 18:10:20,127 - __main__ - DEBUG - Token address: C6Pq772RCWbD4n2cx3LMWprWBvhKQoKLVPWYifoCbonk
+2025-07-06 18:10:20,434 - __main__ - DEBUG - Birdeye token security for C6Pq772RCWbD4n2cx3LMWprWBvhKQoKLVPWYifoCbonk: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"3bb9TQNi2f45biqWM43vAY2YPPrfmmtBddJuPz9Q
+2025-07-06 18:10:20,652 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=C6Pq772RCWbD4n2cx3LMWprWBvhKQoKLVPWYifoCbonk, response_code=200
+2025-07-06 18:10:20,654 - __main__ - INFO - Metadata for C6Pq772RCWbD4n2cx3LMWprWBvhKQoKLVPWYifoCbonk: time=1751821789, symbol=Unknown, name=Unknown
+2025-07-06 18:10:20,661 - __main__ - DEBUG - Metadata for C6Pq772RCWbD4n2cx3LMWprWBvhKQoKLVPWYifoCbonk: {'mint_time': 1751821789, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821820.6542928}
+2025-07-06 18:10:20,662 - __main__ - DEBUG - Trade created for C6Pq772RCWbD4n2cx3LMWprWBvhKQoKLVPWYifoCbonk
+2025-07-06 18:10:20,664 - __main__ - DEBUG - Processing token: {'address': 'CsYHpvwkMSP79t6BjuqWWeNftJ1rKDzByMn4v2GYbonk', 'symbol': 'BonkBook', 'name': 'The Bonk Book (2022)', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:09:49', 'logoURI': 'https://ipfs.io/ipfs/bafkreieaua4wg2w4zxq6zg4yqmn5ykkiusn4eqdx522la3diubee5awabi', 'liquidity': 914.46243642684}
+2025-07-06 18:10:20,665 - __main__ - DEBUG - Token address: CsYHpvwkMSP79t6BjuqWWeNftJ1rKDzByMn4v2GYbonk
+2025-07-06 18:10:21,008 - __main__ - DEBUG - Birdeye token security for CsYHpvwkMSP79t6BjuqWWeNftJ1rKDzByMn4v2GYbonk: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"zYRCfUCXZe4D3eD6QnmSDJ7ucVSpHbxrpXecbSkf
+2025-07-06 18:10:21,180 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=CsYHpvwkMSP79t6BjuqWWeNftJ1rKDzByMn4v2GYbonk, response_code=200
+2025-07-06 18:10:21,188 - __main__ - INFO - Metadata for CsYHpvwkMSP79t6BjuqWWeNftJ1rKDzByMn4v2GYbonk: time=1751821789, symbol=Unknown, name=Unknown
+2025-07-06 18:10:21,194 - __main__ - DEBUG - Metadata for CsYHpvwkMSP79t6BjuqWWeNftJ1rKDzByMn4v2GYbonk: {'mint_time': 1751821789, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821821.1888578}
+2025-07-06 18:10:21,197 - __main__ - DEBUG - Trade created for CsYHpvwkMSP79t6BjuqWWeNftJ1rKDzByMn4v2GYbonk
+2025-07-06 18:10:21,200 - __main__ - DEBUG - Processing token: {'address': 'FK3Sw52YDNNmz5rJJbDYjH4VYazrfD4ghnvHUcdkbonk', 'symbol': '', 'name': 'Face of God', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:09:49', 'logoURI': 'https://ipfs.io/ipfs/bafkreihxzn3dr5hs3iybn2rrefwwm5xgcjj7mdeupid5xzmvjovh4rbzlq', 'liquidity': 914.46243642684}
+2025-07-06 18:10:21,212 - __main__ - DEBUG - Token address: FK3Sw52YDNNmz5rJJbDYjH4VYazrfD4ghnvHUcdkbonk
+2025-07-06 18:10:21,479 - __main__ - DEBUG - Birdeye token security for FK3Sw52YDNNmz5rJJbDYjH4VYazrfD4ghnvHUcdkbonk: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"54vwJ2KNd1Vj2hLAJjQT66UwHE2YDhc9kDHsRzHZ
+2025-07-06 18:10:21,699 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=FK3Sw52YDNNmz5rJJbDYjH4VYazrfD4ghnvHUcdkbonk, response_code=200
+2025-07-06 18:10:21,708 - __main__ - INFO - Metadata for FK3Sw52YDNNmz5rJJbDYjH4VYazrfD4ghnvHUcdkbonk: time=1751821789, symbol=Unknown, name=Unknown
+2025-07-06 18:10:21,713 - __main__ - DEBUG - Metadata for FK3Sw52YDNNmz5rJJbDYjH4VYazrfD4ghnvHUcdkbonk: {'mint_time': 1751821789, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821821.7080185}
+2025-07-06 18:10:21,716 - __main__ - DEBUG - Trade created for FK3Sw52YDNNmz5rJJbDYjH4VYazrfD4ghnvHUcdkbonk
+2025-07-06 18:10:21,719 - __main__ - DEBUG - Processing token: {'address': 'FbTHf1K4xaBUju4Xya4tV96dGSd8zCNY4t3YCBTubonk', 'symbol': 'Wabi', 'name': 'farting dog', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:09:49', 'logoURI': 'https://ipfs.io/ipfs/bafkreig3khfmjfmvduw6bcwgfkebynqh4pitvcdwvonlpfvpgs77xxnkjy', 'liquidity': 1259.4805372523163}
+2025-07-06 18:10:21,724 - __main__ - DEBUG - Token address: FbTHf1K4xaBUju4Xya4tV96dGSd8zCNY4t3YCBTubonk
+2025-07-06 18:10:21,953 - __main__ - DEBUG - Birdeye token security for FbTHf1K4xaBUju4Xya4tV96dGSd8zCNY4t3YCBTubonk: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"368jbLedHKiQfKzh6Xiq9ipNGGmkbUNH7xfTBXuQ
+2025-07-06 18:10:22,129 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=FbTHf1K4xaBUju4Xya4tV96dGSd8zCNY4t3YCBTubonk, response_code=200
+2025-07-06 18:10:22,137 - __main__ - INFO - Metadata for FbTHf1K4xaBUju4Xya4tV96dGSd8zCNY4t3YCBTubonk: time=1751821789, symbol=Unknown, name=Unknown
+2025-07-06 18:10:22,143 - __main__ - DEBUG - Metadata for FbTHf1K4xaBUju4Xya4tV96dGSd8zCNY4t3YCBTubonk: {'mint_time': 1751821789, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821822.137873}
+2025-07-06 18:10:22,150 - __main__ - DEBUG - Trade created for FbTHf1K4xaBUju4Xya4tV96dGSd8zCNY4t3YCBTubonk
+2025-07-06 18:10:22,153 - __main__ - DEBUG - Processing token: {'address': '9J19djRzxQLdRSK3upDnaf2ni4dgJ16HPx5SdG9zUVTu', 'symbol': 'meep', 'name': 'meep', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:09:48', 'logoURI': 'https://ipfs.io/ipfs/QmdVbt5jxBLmc34ptBavvVHhk2dgCsyAzdrVtmVtTGezcP', 'liquidity': 762.0520303556999}
+2025-07-06 18:10:22,156 - __main__ - DEBUG - Token address: 9J19djRzxQLdRSK3upDnaf2ni4dgJ16HPx5SdG9zUVTu
+2025-07-06 18:10:22,382 - __main__ - DEBUG - Birdeye token security for 9J19djRzxQLdRSK3upDnaf2ni4dgJ16HPx5SdG9zUVTu: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"PCqbp9CHrpSdNRpeQyUR81c9yJroV1uAxMnXYwa1
+2025-07-06 18:10:22,559 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9J19djRzxQLdRSK3upDnaf2ni4dgJ16HPx5SdG9zUVTu, response_code=200
+2025-07-06 18:10:22,561 - __main__ - INFO - Metadata for 9J19djRzxQLdRSK3upDnaf2ni4dgJ16HPx5SdG9zUVTu: time=1751821788, symbol=Unknown, name=Unknown
+2025-07-06 18:10:22,569 - __main__ - DEBUG - Metadata for 9J19djRzxQLdRSK3upDnaf2ni4dgJ16HPx5SdG9zUVTu: {'mint_time': 1751821788, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821822.5616736}
+2025-07-06 18:10:22,572 - __main__ - DEBUG - Trade created for 9J19djRzxQLdRSK3upDnaf2ni4dgJ16HPx5SdG9zUVTu
+2025-07-06 18:10:22,575 - __main__ - DEBUG - Processing token: {'address': 'ELut3kZqwB45qEEU6QwB1yJrYFcVeLdjNqwGnhgbonk', 'symbol': 'Miao', 'name': 'Miao Zedong ', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:09:48', 'logoURI': 'https://ipfs.io/ipfs/bafybeietlvzkczr22gexqtbifrhqbcw7qz7x7n4iqhat7pkphqpxtg2lza', 'liquidity': 13.107294922118038}
+2025-07-06 18:10:22,577 - __main__ - DEBUG - Token address: ELut3kZqwB45qEEU6QwB1yJrYFcVeLdjNqwGnhgbonk
+2025-07-06 18:10:22,770 - __main__ - DEBUG - Birdeye token security for ELut3kZqwB45qEEU6QwB1yJrYFcVeLdjNqwGnhgbonk: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"27YoxV1iLDz4LvCaJMsV2E1YUvzwyFVoiSnfmY2W
+2025-07-06 18:10:22,939 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=ELut3kZqwB45qEEU6QwB1yJrYFcVeLdjNqwGnhgbonk, response_code=200
+2025-07-06 18:10:22,941 - __main__ - INFO - Metadata for ELut3kZqwB45qEEU6QwB1yJrYFcVeLdjNqwGnhgbonk: time=1751821788, symbol=Unknown, name=Unknown
+2025-07-06 18:10:22,947 - __main__ - DEBUG - Metadata for ELut3kZqwB45qEEU6QwB1yJrYFcVeLdjNqwGnhgbonk: {'mint_time': 1751821788, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821822.9411669}
+2025-07-06 18:10:22,949 - __main__ - DEBUG - Trade created for ELut3kZqwB45qEEU6QwB1yJrYFcVeLdjNqwGnhgbonk
+2025-07-06 18:10:22,950 - __main__ - DEBUG - Processing token: {'address': '9tq33rQRh1ioFoZfkrHFuyHauS8ht1WaN8i8SAJDMsJj', 'symbol': 'Billy', 'name': 'Billy', 'decimals': 6, 'source': 'raydium_launchlab', 'liquidityAddedAt': '2025-07-06T17:09:45', 'logoURI': 'https://ipfs.io/ipfs/QmTq4B64FYTdBUxef34cgaK7911gJYMWYwQiHgr218bQwj', 'liquidity': 1420.7444633796915}
+2025-07-06 18:10:22,952 - __main__ - DEBUG - Token address: 9tq33rQRh1ioFoZfkrHFuyHauS8ht1WaN8i8SAJDMsJj
+2025-07-06 18:10:23,172 - __main__ - DEBUG - Birdeye token security for 9tq33rQRh1ioFoZfkrHFuyHauS8ht1WaN8i8SAJDMsJj: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"3kdby1ftiB8oQvE2NKvk3X58xwrJhVyrGZ8wiCEi
+2025-07-06 18:10:23,390 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9tq33rQRh1ioFoZfkrHFuyHauS8ht1WaN8i8SAJDMsJj, response_code=200
+2025-07-06 18:10:23,392 - __main__ - INFO - Metadata for 9tq33rQRh1ioFoZfkrHFuyHauS8ht1WaN8i8SAJDMsJj: time=1751821785, symbol=Unknown, name=Unknown
+2025-07-06 18:10:23,400 - __main__ - DEBUG - Metadata for 9tq33rQRh1ioFoZfkrHFuyHauS8ht1WaN8i8SAJDMsJj: {'mint_time': 1751821785, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821823.392162}
+2025-07-06 18:10:23,403 - __main__ - DEBUG - Trade created for 9tq33rQRh1ioFoZfkrHFuyHauS8ht1WaN8i8SAJDMsJj
+2025-07-06 18:10:23,410 - __main__ - DEBUG - Processing token: {'address': 'Bt8JSWBBvtLVmphpjcGMWJvCoUgMrtatto1eWYgQqN4Z', 'symbol': 'BONKRUPT', 'name': 'BONKRUPT', 'decimals': 6, 'source': 'pump_amm', 'liquidityAddedAt': '2025-07-06T17:09:40', 'logoURI': 'https://pump.mypinata.cloud/ipfs/bafkreigxlfajz5436cnwqenpg5rgxexs2swha4fpq5rethxbpz6fxt2wlu?img-width=256&img-dpr=2&img-onerror=redirect', 'liquidity': 45766.11021799966}
+2025-07-06 18:10:23,413 - __main__ - DEBUG - Token address: Bt8JSWBBvtLVmphpjcGMWJvCoUgMrtatto1eWYgQqN4Z
+2025-07-06 18:10:23,647 - __main__ - DEBUG - Birdeye token security for Bt8JSWBBvtLVmphpjcGMWJvCoUgMrtatto1eWYgQqN4Z: status=200, body={"data":{"creatorAddress":"BzRyzttQpYNoG8dSXFeJTVVSSagvJhCb9KUTYDZ3oJB7","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"QWmkffJc9zVQnpEgTD15pXrv7WBzLNaYxHJDbK1
+2025-07-06 18:10:23,834 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=Bt8JSWBBvtLVmphpjcGMWJvCoUgMrtatto1eWYgQqN4Z, response_code=200
+2025-07-06 18:10:23,836 - __main__ - INFO - Metadata for Bt8JSWBBvtLVmphpjcGMWJvCoUgMrtatto1eWYgQqN4Z: time=1751821747, symbol=Unknown, name=Unknown
+2025-07-06 18:10:23,843 - __main__ - DEBUG - Metadata for Bt8JSWBBvtLVmphpjcGMWJvCoUgMrtatto1eWYgQqN4Z: {'mint_time': 1751821747, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821823.8367388}
+2025-07-06 18:10:23,844 - __main__ - DEBUG - Trade created for Bt8JSWBBvtLVmphpjcGMWJvCoUgMrtatto1eWYgQqN4Z
+2025-07-06 18:10:23,845 - __main__ - DEBUG - Processing token: {'address': 'GxXUdGR5ABdHU3qcE8x4kaqR7oMvfgmYvbtJWMiNE1uo', 'symbol': 'UNI', 'name': 'Uniswap', 'decimals': 8, 'source': 'meteora_dlmm', 'liquidityAddedAt': '2025-07-06T17:09:39', 'logoURI': 'https://arweave.net/mEFFesvzNeIPBL5ZAim0rtzHBt-0Sk5bt7l7E834vAI', 'liquidity': 0}
+2025-07-06 18:10:23,847 - __main__ - DEBUG - Token address: GxXUdGR5ABdHU3qcE8x4kaqR7oMvfgmYvbtJWMiNE1uo
+2025-07-06 18:10:24,045 - __main__ - DEBUG - Birdeye token security for GxXUdGR5ABdHU3qcE8x4kaqR7oMvfgmYvbtJWMiNE1uo: status=200, body={"data":{"creatorAddress":"CEmBg7xMhmC9c5LkF2dPkwEMsTYQvdh89thg8iPgH6op","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"3HZBz41cPevjCGjPzfLWwBUv2c4cA2t6m2ywtoa
+2025-07-06 18:10:24,251 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=GxXUdGR5ABdHU3qcE8x4kaqR7oMvfgmYvbtJWMiNE1uo, response_code=200
+2025-07-06 18:10:24,253 - __main__ - INFO - Metadata for GxXUdGR5ABdHU3qcE8x4kaqR7oMvfgmYvbtJWMiNE1uo: time=1751820729, symbol=Unknown, name=Unknown
+2025-07-06 18:10:24,259 - __main__ - DEBUG - Metadata for GxXUdGR5ABdHU3qcE8x4kaqR7oMvfgmYvbtJWMiNE1uo: {'mint_time': 1751820729, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821824.2532396}
+2025-07-06 18:10:24,260 - __main__ - DEBUG - Trade created for GxXUdGR5ABdHU3qcE8x4kaqR7oMvfgmYvbtJWMiNE1uo
+2025-07-06 18:10:24,262 - __main__ - DEBUG - Processing token: {'address': 'DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263', 'decimals': 5, 'liquidity': 13991049.574885, 'logoURI': 'https://arweave.net/hQiPZOsRZXGXBJd_82PhVdlM_hACsT_q6wqwf5cSY7I', 'name': 'Bonk', 'symbol': 'Bonk', 'volume24hUSD': 43492397.96290155, 'volume24hChangePercent': 56.06717665789947, 'fdv': 1989930966.2858043, 'marketcap': 1989930966.2858043, 'rank': 1, 'price': 2.2410139027138845e-05, 'price24hChangePercent': 20.43644021390247}
+2025-07-06 18:10:24,264 - __main__ - DEBUG - Token address: DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263
+2025-07-06 18:10:24,421 - __main__ - DEBUG - Birdeye token security for DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263: status=200, body={"data":{"creatorAddress":"9AhKqLR67hwapvG8SA2JFXaCshXc9nALJjpKaHZrsbkw","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"2K5X6HT9QZ8dcApbWL6mzYw6WBDvL5vWndTpGrF
+2025-07-06 18:10:24,656 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263, response_code=200
+2025-07-06 18:10:24,664 - __main__ - ERROR - Birdeye mint time error for DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "c:\Users\Chaz\Documents\Newbot57.py", line 171, in get_mint_time
+    block_unix_time = data.get("data", {}).get("blockUnixTime")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-07-06 18:10:24,935 - __main__ - INFO - Dexscreener request: https://api.dexscreener.com/latest/dex/tokens/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263, response_code=200
+2025-07-06 18:10:24,942 - __main__ - INFO - Metadata for DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263: time=1715334272, symbol=Unknown, name=Unknown
+2025-07-06 18:10:24,945 - __main__ - DEBUG - Metadata for DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263: {'mint_time': 1715334272, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821824.9423387}
+2025-07-06 18:10:24,946 - __main__ - DEBUG - Trade created for DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263
+2025-07-06 18:10:24,948 - __main__ - DEBUG - Processing token: {'address': '5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi', 'decimals': 6, 'liquidity': 72117.053482576, 'logoURI': 'https://ipfs.io/ipfs/bafybeiarof6sisscce2anqccr4ncgnrxob2b23yoeoeuee4lo7iyp2y74e', 'name': 'Real Asian Hours', 'symbol': 'CHINAWINS', 'volume24hUSD': 24997818.905027397, 'volume24hChangePercent': None, 'fdv': 489008.61787172453, 'marketcap': 489008.61787172453, 'rank': 114, 'price': 0.0004890086556276726, 'price24hChangePercent': 235.8615882732725}
+2025-07-06 18:10:24,950 - __main__ - DEBUG - Token address: 5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi
+2025-07-06 18:10:25,171 - __main__ - DEBUG - Birdeye token security for 5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi: status=200, body={"data":{"creatorAddress":"Auk2JoRn9SJ96iq8BG1BS797LPWAxx3FnoyHGWnibVLT","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"21PUszZBsD6VcxCL2x5uxUiU9eSbmA7tA4pohe2
+2025-07-06 18:10:25,353 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi, response_code=200
+2025-07-06 18:10:25,356 - __main__ - INFO - Metadata for 5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi: time=1751807155, symbol=Unknown, name=Unknown
+2025-07-06 18:10:25,362 - __main__ - DEBUG - Metadata for 5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi: {'mint_time': 1751807155, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821825.3559213}
+2025-07-06 18:10:25,363 - __main__ - DEBUG - Trade created for 5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi
+2025-07-06 18:10:25,365 - __main__ - DEBUG - Processing token: {'address': '31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk', 'decimals': 9, 'liquidity': 3491883.6396174, 'logoURI': 'https://arweave.net/ALLzymnuIihFPhoNUJpPxQzbGI8LodXKhNzXzbRMPbA', 'name': 'Graphite', 'symbol': 'GP', 'volume24hUSD': 21431426.970135, 'volume24hChangePercent': 175.45661505546678, 'fdv': 88327060.201881, 'marketcap': 88327060.201881, 'rank': 8, 'price': 1.418861012708354, 'price24hChangePercent': 75.11906663394218}
+2025-07-06 18:10:25,366 - __main__ - DEBUG - Token address: 31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk
+2025-07-06 18:10:25,589 - __main__ - DEBUG - Birdeye token security for 31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk: status=200, body={"data":{"creatorAddress":"CyeLPkJs7CfzoC2MHLqwT61WFpwizFSE5zfZkivpv7z","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"5NKfzdeXJoH27atzBqb8pGwKBKBkZ6SbTWdQPJ8P
+2025-07-06 18:10:25,763 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk, response_code=200
+2025-07-06 18:10:25,765 - __main__ - ERROR - Birdeye mint time error for 31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "c:\Users\Chaz\Documents\Newbot57.py", line 171, in get_mint_time
+    block_unix_time = data.get("data", {}).get("blockUnixTime")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-07-06 18:10:26,418 - __main__ - INFO - Dexscreener request: https://api.dexscreener.com/latest/dex/tokens/31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk, response_code=200
+2025-07-06 18:10:26,421 - __main__ - INFO - Metadata for 31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk: time=1676008091, symbol=Unknown, name=Unknown
+2025-07-06 18:10:26,429 - __main__ - DEBUG - Metadata for 31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk: {'mint_time': 1676008091, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821826.4214656}
+2025-07-06 18:10:26,436 - __main__ - DEBUG - Trade created for 31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk
+2025-07-06 18:10:26,470 - __main__ - DEBUG - Processing token: {'address': 'Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J', 'decimals': 6, 'liquidity': 176149.86465709552, 'logoURI': 'https://pump.mypinata.cloud/ipfs/bafkreibzbmv3to4k2ddkmqjqsyk7rr54lbfb4xkj74lvpyvnet5ivguqn4?img-width=256&img-dpr=2&img-onerror=redirect', 'name': '@americaparty', 'symbol': 'America', 'volume24hUSD': 20901611.850806534, 'volume24hChangePercent': None, 'fdv': 160367.6679692959, 'marketcap': 160367.6679692959, 'rank': 185, 'price': 0.0001603678175369282, 'price24hChangePercent': 322.6943522289735}
+2025-07-06 18:10:26,480 - __main__ - DEBUG - Token address: Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J
+2025-07-06 18:10:26,662 - __main__ - DEBUG - Birdeye token security for Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J: status=200, body={"data":{"creatorAddress":"5Vd1yMU3VASPeyygVaEJ4sP6g6nYfMHCWEuMbZ38cnzp","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"5np2Fk14aYAGuLjnt8gsSRefRvfJeiWRHMbREPD
+2025-07-06 18:10:26,816 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J, response_code=200
+2025-07-06 18:10:26,825 - __main__ - INFO - Metadata for Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J: time=1751817547, symbol=Unknown, name=Unknown
+2025-07-06 18:10:26,830 - __main__ - DEBUG - Metadata for Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J: {'mint_time': 1751817547, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821826.8254359}
+2025-07-06 18:10:26,833 - __main__ - DEBUG - Trade created for Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J
+2025-07-06 18:10:26,836 - __main__ - DEBUG - Processing token: {'address': '9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe', 'decimals': 6, 'liquidity': 210312.79166918, 'logoURI': 'https://dd.dexscreener.com/ds-data/tokens/solana/34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump.png?size=lg&key=f8697b', 'name': 'MEMELESS COIN', 'symbol': 'MEMELESS', 'volume24hUSD': 20311566.967718527, 'volume24hChangePercent': None, 'fdv': 201387.66961628103, 'marketcap': 201387.66961628103, 'rank': 110, 'price': 0.00020138767441620257, 'price24hChangePercent': 500.07931270188834}
+2025-07-06 18:10:26,847 - __main__ - DEBUG - Token address: 9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe
+2025-07-06 18:10:27,052 - __main__ - DEBUG - Birdeye token security for 9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe: status=200, body={"data":{"creatorAddress":"2wDBMmAYy5Yfu2a641keps2hn93kmaLYLKcfZjRwuL2z","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"22jARbG3JsWaBCfkh3MdFxro9TGuxx8iaC4dwZb
+2025-07-06 18:10:27,248 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe, response_code=200
+2025-07-06 18:10:27,256 - __main__ - INFO - Metadata for 9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe: time=1751817812, symbol=Unknown, name=Unknown
+2025-07-06 18:10:27,261 - __main__ - DEBUG - Metadata for 9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe: {'mint_time': 1751817812, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821827.2564886}
+2025-07-06 18:10:27,264 - __main__ - DEBUG - Trade created for 9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe
+2025-07-06 18:10:27,267 - __main__ - DEBUG - Processing token: {'address': 'HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V', 'decimals': 6, 'liquidity': 200767.97214596, 'logoURI': 'https://pump.mypinata.cloud/ipfs/bafkreier4iicu63qhlv3gmf7757rx6krmn4v3c3hnpsmuglq53abimfwsm?img-width=256&img-dpr=2&img-onerror=redirect', 'name': 'MEMELESS COIN', 'symbol': 'MEMELESS', 'volume24hUSD': 18249480.995641105, 'volume24hChangePercent': None, 'fdv': 284069.07967978757, 'marketcap': 284069.07967978757, 'rank': 146, 'price': 0.00028406909717007246, 'price24hChangePercent': 741.5472034104442}
+2025-07-06 18:10:27,270 - __main__ - DEBUG - Token address: HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V
+2025-07-06 18:10:27,478 - __main__ - DEBUG - Birdeye token security for HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V: status=200, body={"data":{"creatorAddress":"4aR6TqtDcaekmg9djjXGgJyGtY4pbYYy8NWBBYKAXpyr","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"3voVkRMFAGbg1m1hxYdHuP5ei1XxsPdeZZp5ZYK
+2025-07-06 18:10:27,674 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V, response_code=200
+2025-07-06 18:10:27,677 - __main__ - INFO - Metadata for HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V: time=1751818509, symbol=Unknown, name=Unknown
+2025-07-06 18:10:27,683 - __main__ - DEBUG - Metadata for HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V: {'mint_time': 1751818509, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821827.677191}
+2025-07-06 18:10:27,684 - __main__ - DEBUG - Trade created for HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V
+2025-07-06 18:10:27,687 - __main__ - DEBUG - Processing token: {'address': '8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL', 'decimals': 6, 'liquidity': 381613.49160165, 'logoURI': None, 'name': 'Web3 AI IDE', 'symbol': 'IDE', 'volume24hUSD': 17242239.471617952, 'volume24hChangePercent': 1279.2211418870374, 'fdv': 5068284.029605293, 'marketcap': 5068284.029605293, 'rank': 66, 'price': 0.005068284029605292, 'price24hChangePercent': -0.06198631735398581}
+2025-07-06 18:10:27,688 - __main__ - DEBUG - Token address: 8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL
+2025-07-06 18:10:27,945 - __main__ - DEBUG - Birdeye token security for 8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL: status=200, body={"data":{"creatorAddress":"jN6HUG8v7Dqtrcw361bUQo71NDamkbUuBqnPuKnkH11","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"5Ne4vc28RSA5kW7GjxFieAsPRxPGQiaQ8JX2sWp5
+2025-07-06 18:10:28,133 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL, response_code=200
+2025-07-06 18:10:28,135 - __main__ - INFO - Metadata for 8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL: time=1751735670, symbol=Unknown, name=Unknown
+2025-07-06 18:10:28,141 - __main__ - DEBUG - Metadata for 8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL: {'mint_time': 1751735670, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821828.1355228}
+2025-07-06 18:10:28,142 - __main__ - DEBUG - Trade created for 8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL
+2025-07-06 18:10:28,144 - __main__ - DEBUG - Processing token: {'address': '9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP', 'decimals': 6, 'liquidity': 8.447631765830077e-07, 'logoURI': 'https://dd.dexscreener.com/ds-data/tokens/solana/BKe2czAUqsQV88LPdrZX9E5atZ6gB8VXvnBttAmAbonk.png?size=lg&key=ebc546', 'name': 'GGBOND', 'symbol': '', 'volume24hUSD': 16167181.752146333, 'volume24hChangePercent': None, 'fdv': 61207.51135341889, 'marketcap': 61207.51135341889, 'rank': 269, 'price': 6.120756435925043e-05, 'price24hChangePercent': 140.09134566923115}
+2025-07-06 18:10:28,145 - __main__ - DEBUG - Token address: 9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP
+2025-07-06 18:10:28,380 - __main__ - DEBUG - Birdeye token security for 9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP: status=200, body={"data":{"creatorAddress":"GPPETVv4eHn8S9h897EsBkE69GFWURaikwUz7vw3Eew1","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"fXiDSCFetitDtjBzhfEC7HpNaCEv6yiS9siW1R5
+2025-07-06 18:10:28,596 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP, response_code=200
+2025-07-06 18:10:28,599 - __main__ - INFO - Metadata for 9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP: time=1751818186, symbol=Unknown, name=Unknown
+2025-07-06 18:10:28,605 - __main__ - DEBUG - Metadata for 9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP: {'mint_time': 1751818186, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821828.5988436}
+2025-07-06 18:10:28,606 - __main__ - DEBUG - Trade created for 9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP
+2025-07-06 18:10:28,608 - __main__ - DEBUG - Processing token: {'address': '9wK8yN6iz1ie5kEJkvZCTxyN1x5sTdNfx8yeMY8Ebonk', 'decimals': 6, 'liquidity': 5353194.7603128, 'logoURI': 'https://sapphire-working-koi-276.mypinata.cloud/ipfs/bafkreihev5l3pt2xzyvch2cco5qhimguamdztns2pgpi67tj7punzo34ku', 'name': 'Hosico cat', 'symbol': 'Hosico', 'volume24hUSD': 15303031.51980206, 'volume24hChangePercent': 41.78985296501456, 'fdv': 66202817.03689308, 'marketcap': 66202817.03689308, 'rank': 9, 'price': 0.06621025218142956, 'price24hChangePercent': 24.945104316808198}
+2025-07-06 18:10:28,610 - __main__ - DEBUG - Token address: 9wK8yN6iz1ie5kEJkvZCTxyN1x5sTdNfx8yeMY8Ebonk
+2025-07-06 18:10:28,851 - __main__ - DEBUG - Birdeye token security for 9wK8yN6iz1ie5kEJkvZCTxyN1x5sTdNfx8yeMY8Ebonk: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"5kSt9eJaAgqjQx5ProZKvFg8wMEW3d9f6Guu3nCw
+2025-07-06 18:10:29,039 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9wK8yN6iz1ie5kEJkvZCTxyN1x5sTdNfx8yeMY8Ebonk, response_code=200
+2025-07-06 18:10:29,041 - __main__ - INFO - Metadata for 9wK8yN6iz1ie5kEJkvZCTxyN1x5sTdNfx8yeMY8Ebonk: time=1745612599, symbol=Unknown, name=Unknown
+2025-07-06 18:10:29,048 - __main__ - DEBUG - Metadata for 9wK8yN6iz1ie5kEJkvZCTxyN1x5sTdNfx8yeMY8Ebonk: {'mint_time': 1745612599, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821829.041825}
+2025-07-06 18:10:29,049 - __main__ - DEBUG - Trade created for 9wK8yN6iz1ie5kEJkvZCTxyN1x5sTdNfx8yeMY8Ebonk
+2025-07-06 18:10:29,051 - __main__ - DEBUG - Processing token: {'address': '6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk', 'decimals': 6, 'liquidity': 228305.62328468, 'logoURI': 'https://ipfs.io/ipfs/bafkreiapxj6udrdxpct7sztcqqmeod2m3ssb2kv5bxezszywyhbh6argwu', 'name': 'America Party', 'symbol': 'AMEP', 'volume24hUSD': 14195783.64994368, 'volume24hChangePercent': None, 'fdv': 1349531.4582201552, 'marketcap': 1349531.4582201552, 'rank': 16, 'price': 0.0013497086006761555, 'price24hChangePercent': 20718.703802417534}
+2025-07-06 18:10:29,053 - __main__ - DEBUG - Token address: 6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk
+2025-07-06 18:10:29,262 - __main__ - DEBUG - Birdeye token security for 6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"46pkcVFGtHxd1bCTHpti3PdH23yUaLxzmdosHCBd
+2025-07-06 18:10:29,464 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk, response_code=200
+2025-07-06 18:10:29,466 - __main__ - INFO - Metadata for 6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk: time=1751784483, symbol=Unknown, name=Unknown
+2025-07-06 18:10:29,474 - __main__ - DEBUG - Metadata for 6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk: {'mint_time': 1751784483, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821829.466305}
+2025-07-06 18:10:29,476 - __main__ - DEBUG - Trade created for 6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk
+2025-07-06 18:10:29,479 - __main__ - DEBUG - Processing token: {'address': 'BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups', 'decimals': 6, 'liquidity': 2313316.9856652, 'logoURI': 'https://static-create.jup.ag/images/BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups', 'name': 'Uranus', 'symbol': 'URANUS', 'volume24hUSD': 11050917.392900936, 'volume24hChangePercent': -35.43572597974654, 'fdv': 18438891.28706275, 'marketcap': 18438891.28706275, 'rank': 3, 'price': 0.18439552023308756, 'price24hChangePercent': 19.627540034296594}
+2025-07-06 18:10:29,481 - __main__ - DEBUG - Token address: BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups
+2025-07-06 18:10:29,691 - __main__ - DEBUG - Birdeye token security for BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups: status=200, body={"data":{"creatorAddress":"FhVo3mqL8PW5pH5U2CN4XE33DokiyZnUwuGpH2hmHLuM","creatorOwnerAddress":"11111111111111111111111111111111","ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"27Y1xCkR6
+2025-07-06 18:10:29,879 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups, response_code=200
+2025-07-06 18:10:29,887 - __main__ - INFO - Metadata for BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups: time=1751515880, symbol=Unknown, name=Unknown
+2025-07-06 18:10:29,892 - __main__ - DEBUG - Metadata for BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups: {'mint_time': 1751515880, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821829.8877723}
+2025-07-06 18:10:29,895 - __main__ - DEBUG - Trade created for BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups
+2025-07-06 18:10:29,898 - __main__ - DEBUG - Processing token: {'address': '9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd', 'decimals': 6, 'liquidity': 8.509810797632628e-07, 'logoURI': 'https://ipfs.io/ipfs/bafkreibt37nihm5w7ehv3vxtg7sr7hkeqv7i4frar2a4nei54s2pz6rnmy', 'name': 'Just buy 1 BONK of this coin', 'symbol': '1BONK', 'volume24hUSD': 11049319.838812098, 'volume24hChangePercent': None, 'fdv': 76264.40863182452, 'marketcap': 76264.40863182452, 'rank': 243, 'price': 7.626440863182453e-05, 'price24hChangePercent': -1.33559497504082}
+2025-07-06 18:10:29,908 - __main__ - DEBUG - Token address: 9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd
+2025-07-06 18:10:30,485 - __main__ - DEBUG - Birdeye token security for 9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd: status=200, body={"data":{"creatorAddress":"53BApTcQnnjEbaSNX4CCScgJZXodxvKs8gTiRWw4na8j","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"3XPggG4iHAZiXpQTN1NcBL2kkyLKynChQ5ZSvfu
+2025-07-06 18:10:30,660 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd, response_code=200
+2025-07-06 18:10:30,662 - __main__ - INFO - Metadata for 9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd: time=1751819261, symbol=Unknown, name=Unknown
+2025-07-06 18:10:30,669 - __main__ - DEBUG - Metadata for 9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd: {'mint_time': 1751819261, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821830.6624572}
+2025-07-06 18:10:30,670 - __main__ - DEBUG - Trade created for 9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd
+2025-07-06 18:10:30,672 - __main__ - DEBUG - Processing token: {'address': 'AtortPA9SVbkKmdzu5zg4jxgkR4howvPshorA9jYbonk', 'decimals': 6, 'liquidity': 2746686.9935157, 'logoURI': 'https://ipfs.io/ipfs/bafkreieg3xfobdjms5kx2idbcxxia2w5jspjb3msgoa3b6ml7ehhqmap7q', 'name': 'IKUN', 'symbol': 'IKUN', 'volume24hUSD': 10360590.117428016, 'volume24hChangePercent': 14.036803040149165, 'fdv': 23998958.817717534, 'marketcap': 23998958.817717534, 'rank': 4, 'price': 0.024009805872980322, 'price24hChangePercent': 30.414917353540417}
+2025-07-06 18:10:30,674 - __main__ - DEBUG - Token address: AtortPA9SVbkKmdzu5zg4jxgkR4howvPshorA9jYbonk
+2025-07-06 18:10:31,150 - __main__ - DEBUG - Birdeye token security for AtortPA9SVbkKmdzu5zg4jxgkR4howvPshorA9jYbonk: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"4XAy773Se22pri5qpGiBzB8Vv86oa1P6yYPpdKfT
+2025-07-06 18:10:31,345 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=AtortPA9SVbkKmdzu5zg4jxgkR4howvPshorA9jYbonk, response_code=200
+2025-07-06 18:10:31,347 - __main__ - INFO - Metadata for AtortPA9SVbkKmdzu5zg4jxgkR4howvPshorA9jYbonk: time=1747030859, symbol=Unknown, name=Unknown
+2025-07-06 18:10:31,354 - __main__ - DEBUG - Metadata for AtortPA9SVbkKmdzu5zg4jxgkR4howvPshorA9jYbonk: {'mint_time': 1747030859, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821831.3476555}
+2025-07-06 18:10:31,355 - __main__ - DEBUG - Trade created for AtortPA9SVbkKmdzu5zg4jxgkR4howvPshorA9jYbonk
+2025-07-06 18:10:31,357 - __main__ - DEBUG - Processing token: {'address': '83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk', 'decimals': 6, 'liquidity': 556505.41094986, 'logoURI': 'https://ipfs.io/ipfs/bafkreibwuxfmxknunbhif5un32gnaanmypzvyv2jxpbbfqzfineetsfpsu', 'name': 'wechat doge', 'symbol': '', 'volume24hUSD': 9838379.327779759, 'volume24hChangePercent': 9.272457213204873, 'fdv': 3506320.2649607966, 'marketcap': 3506320.2649607966, 'rank': 6, 'price': 0.0035069161233784304, 'price24hChangePercent': 105.54774095716239}
+2025-07-06 18:10:31,359 - __main__ - DEBUG - Token address: 83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk
+2025-07-06 18:10:31,557 - __main__ - DEBUG - Birdeye token security for 83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"2EPZvi175zBMTbxp3kdGwPVTifLkhdUxj5eQxRWf
+2025-07-06 18:10:31,748 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk, response_code=200
+2025-07-06 18:10:31,750 - __main__ - INFO - Metadata for 83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk: time=1751611293, symbol=Unknown, name=Unknown
+2025-07-06 18:10:31,758 - __main__ - DEBUG - Metadata for 83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk: {'mint_time': 1751611293, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821831.7502437}
+2025-07-06 18:10:31,761 - __main__ - DEBUG - Trade created for 83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk
+2025-07-06 18:10:31,768 - __main__ - DEBUG - Processing token: {'address': 'CN162nCPpq3DxPCyKLbAvEJeB1aCxsnVTEG4ZU8vpump', 'decimals': 6, 'liquidity': 1080839.0846004062, 'logoURI': 'https://ipfs.io/ipfs/QmV89inksjFcDiMbVdvfJpVSPHoHBSAoWcq9NzuBY723nU', 'name': 'AGENDA 47', 'symbol': 'A47', 'volume24hUSD': 7321005.939366477, 'volume24hChangePercent': 1.2432494159601004, 'fdv': 24171285.08090377, 'marketcap': 24171285.08090377, 'rank': 63, 'price': 0.024172041971886833, 'price24hChangePercent': 1.2857209888692271}
+2025-07-06 18:10:31,771 - __main__ - DEBUG - Token address: CN162nCPpq3DxPCyKLbAvEJeB1aCxsnVTEG4ZU8vpump
+2025-07-06 18:10:31,990 - __main__ - DEBUG - Birdeye token security for CN162nCPpq3DxPCyKLbAvEJeB1aCxsnVTEG4ZU8vpump: status=200, body={"data":{"creatorAddress":"DTHSAJH8e7uogN2UrznCJVRYMrd315iuEiw4bTGeFH3P","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"3WGM4qRNKnER2sZHfHC9s6mmZ9ZiWgzYxmnMrSz
+2025-07-06 18:10:32,160 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=CN162nCPpq3DxPCyKLbAvEJeB1aCxsnVTEG4ZU8vpump, response_code=200
+2025-07-06 18:10:32,163 - __main__ - INFO - Metadata for CN162nCPpq3DxPCyKLbAvEJeB1aCxsnVTEG4ZU8vpump: time=1738077737, symbol=Unknown, name=Unknown
+2025-07-06 18:10:32,169 - __main__ - DEBUG - Metadata for CN162nCPpq3DxPCyKLbAvEJeB1aCxsnVTEG4ZU8vpump: {'mint_time': 1738077737, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821832.1631062}
+2025-07-06 18:10:32,170 - __main__ - DEBUG - Trade created for CN162nCPpq3DxPCyKLbAvEJeB1aCxsnVTEG4ZU8vpump
+2025-07-06 18:10:32,172 - __main__ - DEBUG - Processing token: {'address': '2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk', 'decimals': 6, 'liquidity': 90022.805700655, 'logoURI': 'https://ipfs.io/ipfs/bafybeibiqndgcycuxknpijy5oqryst7kj3ilw2f6ipgcczl232kheqansm', 'name': 'America Party', 'symbol': 'America', 'volume24hUSD': 6883831.400291918, 'volume24hChangePercent': None, 'fdv': 597668.509853907, 'marketcap': 597668.509853907, 'rank': 19, 'price': 0.0005976761981609579, 'price24hChangePercent': 13327.774049867827}
+2025-07-06 18:10:32,174 - __main__ - DEBUG - Token address: 2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk
+2025-07-06 18:10:32,376 - __main__ - DEBUG - Birdeye token security for 2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"3G9YSVeYnbEuCfG9xzPj8bhqL3veXRLJedLEKDu9
+2025-07-06 18:10:32,596 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk, response_code=200
+2025-07-06 18:10:32,599 - __main__ - INFO - Metadata for 2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk: time=1751754550, symbol=Unknown, name=Unknown
+2025-07-06 18:10:32,607 - __main__ - DEBUG - Metadata for 2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk: {'mint_time': 1751754550, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821832.598939}
+2025-07-06 18:10:32,610 - __main__ - DEBUG - Trade created for 2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk
+2025-07-06 18:10:32,613 - __main__ - DEBUG - Processing token: {'address': 'CDBdbNqmrLu1PcgjrFG52yxg71QnFhBZcUE6PSFdbonk', 'decimals': 6, 'liquidity': 1551541.269027, 'logoURI': 'https://sapphire-working-koi-276.mypinata.cloud/ipfs/bafkreigsmirfebog72ttc2egkfk7udsjjlu2ue7hi73bijzupyyatsopgm', 'name': "Let's BONK", 'symbol': 'LetsBONK', 'volume24hUSD': 6857122.66584241, 'volume24hChangePercent': 79.13779323534452, 'fdv': 10717861.318876412, 'marketcap': 10717861.318876412, 'rank': 10, 'price': 0.1553498343396753, 'price24hChangePercent': 103.34648734693911}
+2025-07-06 18:10:32,615 - __main__ - DEBUG - Token address: CDBdbNqmrLu1PcgjrFG52yxg71QnFhBZcUE6PSFdbonk
+2025-07-06 18:10:32,824 - __main__ - DEBUG - Birdeye token security for CDBdbNqmrLu1PcgjrFG52yxg71QnFhBZcUE6PSFdbonk: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"5XpzgkKHCbqxn4v8aDY3q2VoMQrVYDsy74dAydPB
+2025-07-06 18:10:33,023 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=CDBdbNqmrLu1PcgjrFG52yxg71QnFhBZcUE6PSFdbonk, response_code=200
+2025-07-06 18:10:33,025 - __main__ - INFO - Metadata for CDBdbNqmrLu1PcgjrFG52yxg71QnFhBZcUE6PSFdbonk: time=1745605162, symbol=Unknown, name=Unknown
+2025-07-06 18:10:33,032 - __main__ - DEBUG - Metadata for CDBdbNqmrLu1PcgjrFG52yxg71QnFhBZcUE6PSFdbonk: {'mint_time': 1745605162, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821833.025566}
+2025-07-06 18:10:33,034 - __main__ - DEBUG - Trade created for CDBdbNqmrLu1PcgjrFG52yxg71QnFhBZcUE6PSFdbonk
+2025-07-06 18:10:33,035 - __main__ - DEBUG - Processing token: {'address': 'HtTYHz1Kf3rrQo6AqDLmss7gq5WrkWAaXn3tupUZbonk', 'decimals': 6, 'liquidity': 942065.36078034, 'logoURI': 'https://ipfs.io/ipfs/bafybeiavavhxgnownmgwtkuqc6t5gufrob55lvckjb5put3ftrf4cxvdae', 'name': 'Kori The Pom', 'symbol': 'KORI', 'volume24hUSD': 6441834.402939774, 'volume24hChangePercent': 30.864005091138335, 'fdv': 16132058.963523924, 'marketcap': 16132058.963523924, 'rank': 11, 'price': 0.01613400108755009, 'price24hChangePercent': 104.94940720574031}
+2025-07-06 18:10:33,037 - __main__ - DEBUG - Token address: HtTYHz1Kf3rrQo6AqDLmss7gq5WrkWAaXn3tupUZbonk
+2025-07-06 18:10:33,221 - __main__ - DEBUG - Birdeye token security for HtTYHz1Kf3rrQo6AqDLmss7gq5WrkWAaXn3tupUZbonk: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"abo8kQThU3JyzwTL21EufZzyuWasAtzfpkGAZx7U
+2025-07-06 18:10:33,396 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=HtTYHz1Kf3rrQo6AqDLmss7gq5WrkWAaXn3tupUZbonk, response_code=200
+2025-07-06 18:10:33,399 - __main__ - INFO - Metadata for HtTYHz1Kf3rrQo6AqDLmss7gq5WrkWAaXn3tupUZbonk: time=1747141893, symbol=Unknown, name=Unknown
+2025-07-06 18:10:33,405 - __main__ - DEBUG - Metadata for HtTYHz1Kf3rrQo6AqDLmss7gq5WrkWAaXn3tupUZbonk: {'mint_time': 1747141893, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821833.3991115}
+2025-07-06 18:10:33,407 - __main__ - DEBUG - Trade created for HtTYHz1Kf3rrQo6AqDLmss7gq5WrkWAaXn3tupUZbonk
+2025-07-06 18:10:33,408 - __main__ - DEBUG - Processing token: {'address': '6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk', 'decimals': 6, 'liquidity': 322629.2541981649, 'logoURI': 'https://ipfs.io/ipfs/bafkreidtyza2yjoebwsqsmcsozwvdzaz3el6ohohebl2w3f2bclk6a2cbi', 'name': 'bapcat', 'symbol': 'bap', 'volume24hUSD': 6240610.10654781, 'volume24hChangePercent': -47.143745531356174, 'fdv': 2820314.2756510423, 'marketcap': 2820314.2756510423, 'rank': 15, 'price': 0.006715985564864508, 'price24hChangePercent': 2.6452986217940753}
+2025-07-06 18:10:33,410 - __main__ - DEBUG - Token address: 6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk
+2025-07-06 18:10:33,645 - __main__ - DEBUG - Birdeye token security for 6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk: status=200, body={"data":{"creatorAddress":"WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"5Y9qekykjjtfCcgjvWuhbiDpVxxuAdjyWqXq4oNj
+2025-07-06 18:10:33,840 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk, response_code=200
+2025-07-06 18:10:33,842 - __main__ - INFO - Metadata for 6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk: time=1749665511, symbol=Unknown, name=Unknown
+2025-07-06 18:10:33,849 - __main__ - DEBUG - Metadata for 6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk: {'mint_time': 1749665511, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821833.8427806}
+2025-07-06 18:10:33,850 - __main__ - DEBUG - Trade created for 6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk
+2025-07-06 18:10:33,853 - __main__ - DEBUG - Processing token: {'address': '34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump', 'decimals': 6, 'liquidity': 98066.774766123, 'logoURI': 'https://ipfs.io/ipfs/bafkreier4iicu63qhlv3gmf7757rx6krmn4v3c3hnpsmuglq53abimfwsm', 'name': 'MEMELESS COIN', 'symbol': 'MEMELESS', 'volume24hUSD': 6213118.638409985, 'volume24hChangePercent': 142.75307353582235, 'fdv': 628103.2565186529, 'marketcap': 628103.2565186529, 'rank': 12, 'price': 0.0006281067500523613, 'price24hChangePercent': 14801.410511551858}
+2025-07-06 18:10:33,855 - __main__ - DEBUG - Token address: 34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump
+2025-07-06 18:10:34,100 - __main__ - DEBUG - Birdeye token security for 34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump: status=200, body={"data":{"creatorAddress":"GgkwQNkWtwVrSKGLEr361M2aLjT6X9jiUbxofR92JLGJ","creatorOwnerAddress":null,"ownerAddress":null,"ownerOfOwnerAddress":null,"creationTx":"2Vkq4PCMtX8GCQvrmRcMEzCyysy9dRSjadcQaUt
+2025-07-06 18:10:34,298 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump, response_code=200
+2025-07-06 18:10:34,301 - __main__ - INFO - Metadata for 34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump: time=1751732871, symbol=Unknown, name=Unknown
+2025-07-06 18:10:34,307 - __main__ - DEBUG - Metadata for 34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump: {'mint_time': 1751732871, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821834.301199}
+2025-07-06 18:10:34,308 - __main__ - DEBUG - Trade created for 34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump
+2025-07-06 18:10:34,310 - __main__ - INFO - Fetched 39 trades from Birdeye
+2025-07-06 18:10:34,335 - __main__ - DEBUG - Attempting to send alert for 9kW58Uj1U7kA3r3e3qV6z3z3:  Token Alert!
+Token: Unknown (Unknown)
+Mint Address: 9kW58Uj1U7kA3r3e3qV6z3z3
+1h Volume: $0.00
+24h Volume: $0.00
+5m Oscillator: 0.00%
+Age: 2.00h
+MFI: N/A
+RVI: N/A (Signal: N/A)
+Explorer: https://explorer.solana.com/address/9kW58Uj1U7kA3r3e3qV6z3z3
+Birdeye: https://birdeye.so/token/9kW58Uj1U7kA3r3e3qV6z3z3
+2025-07-06 18:10:34,814 - __main__ - INFO - Alert sent for 9kW58Uj1U7kA3r3e3qV6z3z3
+2025-07-06 18:10:34,815 - __main__ - DEBUG - Token EjHEyFGz8Rv9r1rcdFa1hGhQMjcswwv5tf2yZW8BFpyT skipped: age 0.0021358708333333335
+2025-07-06 18:10:34,820 - __main__ - DEBUG - Token 2QegNG2Sz7zskM4wcescztH2cNjjUEZqGMaEds3uFBLQ skipped: age 0.013246981944444444
+2025-07-06 18:10:34,822 - __main__ - DEBUG - Token Ft5TqLk1FWkBjBqAcr88LEkvM84mYBYqAKtfhevN2GFd skipped: age 0.0024136486111111114
+2025-07-06 18:10:34,823 - __main__ - DEBUG - Token 9agVHTz9c12P9hGtq3zPCT83fzGKouxp5TiUftDxbonk skipped: age 0.0040803152777777775
+2025-07-06 18:10:34,825 - __main__ - DEBUG - Token CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk skipped: age 0.0040803152777777775
+2025-07-06 18:10:34,827 - __main__ - DEBUG - Token DNkcjSFic3G3BfczmKBgZYPooXLEW1tGUVpjFxXbffQc skipped: age 0.2996358708333334
+2025-07-06 18:10:34,829 - __main__ - DEBUG - Token FAiNXud91wVKBeDheTsY36bta9p6rCDDWDQmQvtL66Ph skipped: age 0.01241364861111111
+2025-07-06 18:10:34,831 - __main__ - DEBUG - Token 3qv6HmG7XJfqXffZZi2YYmmmKsPuKy2wnxGL1Vdxbonk skipped: age 0.004635870833333333
+2025-07-06 18:10:34,839 - __main__ - DEBUG - Token 5UHyMuQbXaqcMoCzbjyKRR2KrxUevgHKejL6xSiSbonk skipped: age 0.004635870833333333
+2025-07-06 18:10:34,841 - __main__ - DEBUG - Token 9XuTvmoMzmXUuU7eAvUdeo1v1vRG2Rm1E9seFFWqbonk skipped: age 0.0074136486111111115
+2025-07-06 18:10:34,843 - __main__ - DEBUG - Token C6Pq772RCWbD4n2cx3LMWprWBvhKQoKLVPWYifoCbonk skipped: age 0.0074136486111111115
+2025-07-06 18:10:34,844 - __main__ - DEBUG - Token CsYHpvwkMSP79t6BjuqWWeNftJ1rKDzByMn4v2GYbonk skipped: age 0.0074136486111111115
+2025-07-06 18:10:34,847 - __main__ - DEBUG - Token FK3Sw52YDNNmz5rJJbDYjH4VYazrfD4ghnvHUcdkbonk skipped: age 0.0074136486111111115
+2025-07-06 18:10:34,854 - __main__ - DEBUG - Token FbTHf1K4xaBUju4Xya4tV96dGSd8zCNY4t3YCBTubonk skipped: age 0.0074136486111111115
+2025-07-06 18:10:34,855 - __main__ - DEBUG - Token 9J19djRzxQLdRSK3upDnaf2ni4dgJ16HPx5SdG9zUVTu skipped: age 0.007691426388888889
+2025-07-06 18:10:34,857 - __main__ - DEBUG - Token ELut3kZqwB45qEEU6QwB1yJrYFcVeLdjNqwGnhgbonk skipped: age 0.007691426388888889
+2025-07-06 18:10:34,859 - __main__ - DEBUG - Token 9tq33rQRh1ioFoZfkrHFuyHauS8ht1WaN8i8SAJDMsJj skipped: age 0.008524759722222223
+2025-07-06 18:10:34,863 - __main__ - DEBUG - Token Bt8JSWBBvtLVmphpjcGMWJvCoUgMrtatto1eWYgQqN4Z skipped: age 0.019080315277777777
+2025-07-06 18:10:34,864 - __main__ - DEBUG - Token GxXUdGR5ABdHU3qcE8x4kaqR7oMvfgmYvbtJWMiNE1uo skipped: age 0.30185809305555555
+2025-07-06 18:10:34,866 - __main__ - DEBUG - Token DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263 skipped: age 10135.4288025375
+2025-07-06 18:10:34,868 - __main__ - DEBUG - Attempting to send alert for 5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi:  Token Alert!
+Token: Unknown (Unknown)
+Mint Address: 5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi
+1h Volume: $0.00
+24h Volume: $0.00
+5m Oscillator: 0.00%
+Age: 4.07h
+MFI: N/A
+RVI: N/A (Signal: N/A)
+Explorer: https://explorer.solana.com/address/5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi
+Birdeye: https://birdeye.so/token/5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi
+2025-07-06 18:10:34,953 - __main__ - INFO - Alert sent for 5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi
+2025-07-06 18:10:34,955 - __main__ - DEBUG - Token 31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk skipped: age 21059.367969204166
+2025-07-06 18:10:34,960 - __main__ - DEBUG - Attempting to send alert for Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J:  Token Alert!
+Token: Unknown (Unknown)
+Mint Address: Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J
+1h Volume: $0.00
+24h Volume: $0.00
+5m Oscillator: 0.00%
+Age: 1.19h
+MFI: N/A
+RVI: N/A (Signal: N/A)
+Explorer: https://explorer.solana.com/address/Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J
+Birdeye: https://birdeye.so/token/Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J
+2025-07-06 18:10:35,032 - __main__ - INFO - Alert sent for Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J
+2025-07-06 18:10:35,033 - __main__ - DEBUG - Attempting to send alert for 9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe:  Token Alert!
+Token: Unknown (Unknown)
+Mint Address: 9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe
+1h Volume: $0.00
+24h Volume: $0.00
+5m Oscillator: 0.00%
+Age: 1.11h
+MFI: N/A
+RVI: N/A (Signal: N/A)
+Explorer: https://explorer.solana.com/address/9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe
+Birdeye: https://birdeye.so/token/9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe
+2025-07-06 18:10:35,102 - __main__ - INFO - Alert sent for 9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe
+2025-07-06 18:10:35,103 - __main__ - DEBUG - Attempting to send alert for HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V:  Token Alert!
+Token: Unknown (Unknown)
+Mint Address: HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V
+1h Volume: $0.00
+24h Volume: $0.00
+5m Oscillator: 0.00%
+Age: 0.92h
+MFI: N/A
+RVI: N/A (Signal: N/A)
+Explorer: https://explorer.solana.com/address/HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V
+Birdeye: https://birdeye.so/token/HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V
+2025-07-06 18:10:35,181 - __main__ - INFO - Alert sent for HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V
+2025-07-06 18:10:35,183 - __main__ - DEBUG - Attempting to send alert for 8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL:  Token Alert!
+Token: Unknown (Unknown)
+Mint Address: 8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL
+1h Volume: $0.00
+24h Volume: $0.00
+5m Oscillator: 0.00%
+Age: 23.93h
+MFI: N/A
+RVI: N/A (Signal: N/A)
+Explorer: https://explorer.solana.com/address/8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL
+Birdeye: https://birdeye.so/token/8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL
+2025-07-06 18:10:35,332 - __main__ - INFO - Alert sent for 8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL
+2025-07-06 18:10:35,333 - __main__ - DEBUG - Attempting to send alert for 9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP:  Token Alert!
+Token: Unknown (Unknown)
+Mint Address: 9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP
+1h Volume: $0.00
+24h Volume: $0.00
+5m Oscillator: 0.00%
+Age: 1.01h
+MFI: N/A
+RVI: N/A (Signal: N/A)
+Explorer: https://explorer.solana.com/address/9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP
+Birdeye: https://birdeye.so/token/9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP
+2025-07-06 18:10:35,454 - __main__ - INFO - Alert sent for 9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP
+2025-07-06 18:10:35,456 - __main__ - DEBUG - Token 9wK8yN6iz1ie5kEJkvZCTxyN1x5sTdNfx8yeMY8Ebonk skipped: age 1724.782413648611
+2025-07-06 18:10:35,462 - __main__ - DEBUG - Attempting to send alert for 6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk:  Token Alert!
+Token: Unknown (Unknown)
+Mint Address: 6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk
+1h Volume: $0.00
+24h Volume: $0.00
+5m Oscillator: 0.00%
+Age: 10.37h
+MFI: N/A
+RVI: N/A (Signal: N/A)
+Explorer: https://explorer.solana.com/address/6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk
+Birdeye: https://birdeye.so/token/6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk
+2025-07-06 18:10:35,545 - __main__ - INFO - Alert sent for 6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk
+2025-07-06 18:10:35,546 - __main__ - DEBUG - Attempting to send alert for BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups:  Token Alert!
+Token: Unknown (Unknown)
+Mint Address: BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups
+1h Volume: $0.00
+24h Volume: $0.00
+5m Oscillator: 0.00%
+Age: 84.98h
+MFI: N/A
+RVI: N/A (Signal: N/A)
+Explorer: https://explorer.solana.com/address/BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups
+Birdeye: https://birdeye.so/token/BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups
+2025-07-06 18:10:35,640 - __main__ - INFO - Alert sent for BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups
+2025-07-06 18:10:35,641 - __main__ - DEBUG - Attempting to send alert for 9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd:  Token Alert!
+Token: Unknown (Unknown)
+Mint Address: 9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd
+1h Volume: $0.00
+24h Volume: $0.00
+5m Oscillator: 0.00%
+Age: 0.71h
+MFI: N/A
+RVI: N/A (Signal: N/A)
+Explorer: https://explorer.solana.com/address/9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd
+Birdeye: https://birdeye.so/token/9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd
+2025-07-06 18:10:35,712 - __main__ - INFO - Alert sent for 9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd
+2025-07-06 18:10:35,713 - __main__ - DEBUG - Token AtortPA9SVbkKmdzu5zg4jxgkR4howvPshorA9jYbonk skipped: age 1330.8213025375
+2025-07-06 18:10:35,719 - __main__ - DEBUG - Attempting to send alert for 83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk:  Token Alert!
+Token: Unknown (Unknown)
+Mint Address: 83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk
+1h Volume: $0.00
+24h Volume: $0.00
+5m Oscillator: 0.00%
+Age: 58.48h
+MFI: N/A
+RVI: N/A (Signal: N/A)
+Explorer: https://explorer.solana.com/address/83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk
+Birdeye: https://birdeye.so/token/83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk
+2025-07-06 18:10:35,810 - __main__ - INFO - Alert sent for 83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk
+2025-07-06 18:10:35,812 - __main__ - DEBUG - Token CN162nCPpq3DxPCyKLbAvEJeB1aCxsnVTEG4ZU8vpump skipped: age 3817.7996358708333
+2025-07-06 18:10:35,817 - __main__ - DEBUG - Attempting to send alert for 2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk:  Token Alert!
+Token: Unknown (Unknown)
+Mint Address: 2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk
+1h Volume: $0.00
+24h Volume: $0.00
+5m Oscillator: 0.00%
+Age: 18.68h
+MFI: N/A
+RVI: N/A (Signal: N/A)
+Explorer: https://explorer.solana.com/address/2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk
+Birdeye: https://birdeye.so/token/2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk
+2025-07-06 18:10:35,910 - __main__ - INFO - Alert sent for 2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk
+2025-07-06 18:10:35,911 - __main__ - DEBUG - Token CDBdbNqmrLu1PcgjrFG52yxg71QnFhBZcUE6PSFdbonk skipped: age 1726.8482469819444
+2025-07-06 18:10:35,916 - __main__ - DEBUG - Token HtTYHz1Kf3rrQo6AqDLmss7gq5WrkWAaXn3tupUZbonk skipped: age 1299.9785247597222
+2025-07-06 18:10:35,918 - __main__ - DEBUG - Attempting to send alert for 6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk:  Token Alert!
+Token: Unknown (Unknown)
+Mint Address: 6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk
+1h Volume: $0.00
+24h Volume: $0.00
+5m Oscillator: 0.00%
+Age: 598.97h
+MFI: N/A
+RVI: N/A (Signal: N/A)
+Explorer: https://explorer.solana.com/address/6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk
+Birdeye: https://birdeye.so/token/6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk
+2025-07-06 18:10:36,012 - __main__ - INFO - Alert sent for 6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk
+2025-07-06 18:10:36,013 - __main__ - DEBUG - Attempting to send alert for 34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump:  Token Alert!
+Token: Unknown (Unknown)
+Mint Address: 34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump
+1h Volume: $0.00
+24h Volume: $0.00
+5m Oscillator: 0.00%
+Age: 24.71h
+MFI: N/A
+RVI: N/A (Signal: N/A)
+Explorer: https://explorer.solana.com/address/34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump
+Birdeye: https://birdeye.so/token/34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump
+2025-07-06 18:10:36,092 - __main__ - INFO - Alert sent for 34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump
+2025-07-06 19:14:14,134 - __main__ - INFO - Bot stopped.
+
