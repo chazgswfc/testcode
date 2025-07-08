@@ -1,0 +1,157 @@
+bot_new.log: -
+
+2025-07-06 17:59:48,762 - __main__ - INFO - Starting Telegram bot...
+2025-07-06 17:59:48,848 - __main__ - INFO - Python version: 3.13.4 (tags/v3.13.4:8a526ec, Jun  3 2025, 17:46:04) [MSC v.1943 64 bit (AMD64)], Dependencies: requests=2.32.4, pandas=2.3.0, solders=0.26.0, telegram=22.2, backoff=2.2.1
+2025-07-06 18:00:21,829 - __main__ - INFO - Bot started for chat ID: 7525494318
+2025-07-06 18:10:10,807 - __main__ - INFO - Scanning tokens at 2025-07-06 17:10:10 UTC, CHAT_ID: 7525494318
+2025-07-06 18:10:10,814 - __main__ - INFO - Cleared cache. OHLCV_CACHE: 0, TOKEN_CACHE: 0, PROCESSED_TOKENS: 0
+2025-07-06 18:10:10,818 - __main__ - INFO - Testing Birdeye with FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump
+2025-07-06 18:10:11,692 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump, response_code=200
+2025-07-06 18:10:11,720 - __main__ - INFO - Metadata for FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump: time=1751550254, symbol=Unknown, name=Unknown
+2025-07-06 18:10:11,723 - __main__ - INFO - Test metadata: {'mint_time': 1751550254, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821811.7206666}
+2025-07-06 18:10:12,014 - __main__ - INFO - Birdeye OHLCV request: https://public-api.birdeye.so/defi/v3/ohlcv?address=FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump&type=5m&time_from=1751811011&time_to=1751821811, response_code=200
+2025-07-06 18:10:12,449 - __main__ - INFO - Test OHLCV rows: 15
+2025-07-06 18:10:12,758 - __main__ - INFO - Birdeye price request: https://public-api.birdeye.so/defi/price?address=FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump, response_code=200
+2025-07-06 18:10:12,909 - __main__ - ERROR - Error processing test token FA26x7wpHZsFu6eAd8ncMGTJqhHTdqfUuUH8Xt6Mpump: 'NoneType' object has no attribute 'empty'
+Traceback (most recent call last):
+  File "c:\Users\Chaz\Documents\Newbot57.py", line 545, in scan_volume_tokens
+    mfi, (rvi, rvi_signal), (macd, macd_signal) = calculate_indicators(test_mint)
+                                                  ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "c:\Users\Chaz\Documents\Newbot57.py", line 383, in calculate_indicators
+    (macd, macd_signal) if not macd.empty else (None, None)
+                               ^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'empty'
+2025-07-06 18:10:12,983 - __main__ - INFO - Testing Birdeye with 9kW58Uj1U7kA3r3e3qV6z3z3
+2025-07-06 18:10:13,178 - __main__ - WARNING - Token security failed for 9kW58Uj1U7kA3r3e3qV6z3z3: {"success":false,"message":"address is invalid format"}
+2025-07-06 18:10:13,341 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9kW58Uj1U7kA3r3e3qV6z3z3, response_code=400
+2025-07-06 18:10:14,042 - __main__ - INFO - Dexscreener request: https://api.dexscreener.com/latest/dex/tokens/9kW58Uj1U7kA3r3e3qV6z3z3, response_code=200
+2025-07-06 18:10:14,050 - __main__ - WARNING - No Dexscreener pairs for 9kW58Uj1U7kA3r3e3qV6z3z3
+2025-07-06 18:10:14,053 - __main__ - WARNING - No mint time for 9kW58Uj1U7kA3r3e3qV6z3z3
+2025-07-06 18:10:14,062 - __main__ - INFO - Metadata for 9kW58Uj1U7kA3r3e3qV6z3z3: time=None, symbol=Unknown, name=Unknown
+2025-07-06 18:10:14,069 - __main__ - INFO - Test metadata: {'mint_time': None, 'symbol': 'Unknown', 'name': 'Unknown', 'last_oscillator': 0.0, 'cache_time': 1751821814.062238}
+2025-07-06 18:10:14,323 - __main__ - INFO - Birdeye OHLCV request: https://public-api.birdeye.so/defi/v3/ohlcv?address=9kW58Uj1U7kA3r3e3qV6z3z3&type=5m&time_from=1751811014&time_to=1751821814, response_code=400
+2025-07-06 18:10:14,325 - __main__ - WARNING - OHLCV error for 9kW58Uj1U7kA3r3e3qV6z3z3: status=400, response={"success":false,"message":"address is invalid format"}
+2025-07-06 18:10:14,332 - __main__ - INFO - Test indicators for 9kW58Uj1U7kA3r3e3qV6z3z3: MFI=None, RVI=None, RVI_signal=None, Volume_1h=$0.00, Volume_24h=$0.00
+2025-07-06 18:10:14,333 - __main__ - INFO - Fetching new and trending tokens from Birdeye at 2025-07-06 17:10:14 UTC
+2025-07-06 18:10:15,388 - __main__ - INFO - Birdeye new listings request: https://public-api.birdeye.so/defi/v2/tokens/new_listing?chain=solana&offset=0&limit=20, response_code=200
+2025-07-06 18:10:15,445 - __main__ - INFO - Retrieved 20 new listings
+2025-07-06 18:10:15,448 - __main__ - INFO - Processing 20 new listings
+2025-07-06 18:10:15,666 - __main__ - INFO - Birdeye trending tokens request: https://public-api.birdeye.so/defi/token_trending?chain=solana&sort_by=volume24hUSD&sort_type=desc&offset=0&limit=20, response_code=200
+2025-07-06 18:10:15,676 - __main__ - INFO - Retrieved 20 trending tokens with sort_by=volume24hUSD
+2025-07-06 18:10:15,679 - __main__ - INFO - Processing 20 trending tokens
+2025-07-06 18:10:15,687 - __main__ - INFO - Total tokens to process: 40
+2025-07-06 18:10:15,881 - __main__ - WARNING - Token security failed for EjHEyFGz8Rv9r1rcdFa1hGhQMjcswwv5tf2yZW8BFpyT: {"success":false,"message":"Bad request"}
+2025-07-06 18:10:16,069 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=EjHEyFGz8Rv9r1rcdFa1hGhQMjcswwv5tf2yZW8BFpyT, response_code=200
+2025-07-06 18:10:16,073 - __main__ - INFO - Metadata for EjHEyFGz8Rv9r1rcdFa1hGhQMjcswwv5tf2yZW8BFpyT: time=1751821808, symbol=Unknown, name=Unknown
+2025-07-06 18:10:16,442 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=2QegNG2Sz7zskM4wcescztH2cNjjUEZqGMaEds3uFBLQ, response_code=200
+2025-07-06 18:10:16,444 - __main__ - INFO - Metadata for 2QegNG2Sz7zskM4wcescztH2cNjjUEZqGMaEds3uFBLQ: time=1751821768, symbol=Unknown, name=Unknown
+2025-07-06 18:10:16,672 - __main__ - WARNING - Token security failed for Ft5TqLk1FWkBjBqAcr88LEkvM84mYBYqAKtfhevN2GFd: {"success":false,"message":"Bad request"}
+2025-07-06 18:10:16,888 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=Ft5TqLk1FWkBjBqAcr88LEkvM84mYBYqAKtfhevN2GFd, response_code=200
+2025-07-06 18:10:16,901 - __main__ - INFO - Metadata for Ft5TqLk1FWkBjBqAcr88LEkvM84mYBYqAKtfhevN2GFd: time=1751821807, symbol=Unknown, name=Unknown
+2025-07-06 18:10:17,148 - __main__ - WARNING - Token security failed for 9agVHTz9c12P9hGtq3zPCT83fzGKouxp5TiUftDxbonk: {"success":false,"message":"Bad request"}
+2025-07-06 18:10:17,322 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9agVHTz9c12P9hGtq3zPCT83fzGKouxp5TiUftDxbonk, response_code=200
+2025-07-06 18:10:17,330 - __main__ - INFO - Metadata for 9agVHTz9c12P9hGtq3zPCT83fzGKouxp5TiUftDxbonk: time=1751821801, symbol=Unknown, name=Unknown
+2025-07-06 18:10:17,590 - __main__ - WARNING - Token security failed for CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk: {"success":false,"message":"Bad request"}
+2025-07-06 18:10:17,796 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk, response_code=200
+2025-07-06 18:10:17,821 - __main__ - INFO - Metadata for CAcpgJ1GYyJdi5HcCH5b4Mipxq7iwq6GQGkz1Lkabonk: time=1751821801, symbol=Unknown, name=Unknown
+2025-07-06 18:10:18,247 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=DNkcjSFic3G3BfczmKBgZYPooXLEW1tGUVpjFxXbffQc, response_code=200
+2025-07-06 18:10:18,257 - __main__ - INFO - Metadata for DNkcjSFic3G3BfczmKBgZYPooXLEW1tGUVpjFxXbffQc: time=1751820737, symbol=Unknown, name=Unknown
+2025-07-06 18:10:18,482 - __main__ - WARNING - Token security failed for FAiNXud91wVKBeDheTsY36bta9p6rCDDWDQmQvtL66Ph: {"success":false,"message":"Bad request"}
+2025-07-06 18:10:18,691 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=FAiNXud91wVKBeDheTsY36bta9p6rCDDWDQmQvtL66Ph, response_code=200
+2025-07-06 18:10:18,700 - __main__ - INFO - Metadata for FAiNXud91wVKBeDheTsY36bta9p6rCDDWDQmQvtL66Ph: time=1751821771, symbol=Unknown, name=Unknown
+2025-07-06 18:10:18,963 - __main__ - WARNING - Token security failed for 3qv6HmG7XJfqXffZZi2YYmmmKsPuKy2wnxGL1Vdxbonk: {"success":false,"message":"Bad request"}
+2025-07-06 18:10:19,163 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=3qv6HmG7XJfqXffZZi2YYmmmKsPuKy2wnxGL1Vdxbonk, response_code=200
+2025-07-06 18:10:19,172 - __main__ - INFO - Metadata for 3qv6HmG7XJfqXffZZi2YYmmmKsPuKy2wnxGL1Vdxbonk: time=1751821799, symbol=Unknown, name=Unknown
+2025-07-06 18:10:19,409 - __main__ - WARNING - Token security failed for 5UHyMuQbXaqcMoCzbjyKRR2KrxUevgHKejL6xSiSbonk: {"success":false,"message":"Bad request"}
+2025-07-06 18:10:19,583 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=5UHyMuQbXaqcMoCzbjyKRR2KrxUevgHKejL6xSiSbonk, response_code=200
+2025-07-06 18:10:19,585 - __main__ - INFO - Metadata for 5UHyMuQbXaqcMoCzbjyKRR2KrxUevgHKejL6xSiSbonk: time=1751821799, symbol=Unknown, name=Unknown
+2025-07-06 18:10:20,113 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9XuTvmoMzmXUuU7eAvUdeo1v1vRG2Rm1E9seFFWqbonk, response_code=200
+2025-07-06 18:10:20,116 - __main__ - INFO - Metadata for 9XuTvmoMzmXUuU7eAvUdeo1v1vRG2Rm1E9seFFWqbonk: time=1751821789, symbol=Unknown, name=Unknown
+2025-07-06 18:10:20,652 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=C6Pq772RCWbD4n2cx3LMWprWBvhKQoKLVPWYifoCbonk, response_code=200
+2025-07-06 18:10:20,654 - __main__ - INFO - Metadata for C6Pq772RCWbD4n2cx3LMWprWBvhKQoKLVPWYifoCbonk: time=1751821789, symbol=Unknown, name=Unknown
+2025-07-06 18:10:21,180 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=CsYHpvwkMSP79t6BjuqWWeNftJ1rKDzByMn4v2GYbonk, response_code=200
+2025-07-06 18:10:21,188 - __main__ - INFO - Metadata for CsYHpvwkMSP79t6BjuqWWeNftJ1rKDzByMn4v2GYbonk: time=1751821789, symbol=Unknown, name=Unknown
+2025-07-06 18:10:21,699 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=FK3Sw52YDNNmz5rJJbDYjH4VYazrfD4ghnvHUcdkbonk, response_code=200
+2025-07-06 18:10:21,708 - __main__ - INFO - Metadata for FK3Sw52YDNNmz5rJJbDYjH4VYazrfD4ghnvHUcdkbonk: time=1751821789, symbol=Unknown, name=Unknown
+2025-07-06 18:10:22,129 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=FbTHf1K4xaBUju4Xya4tV96dGSd8zCNY4t3YCBTubonk, response_code=200
+2025-07-06 18:10:22,137 - __main__ - INFO - Metadata for FbTHf1K4xaBUju4Xya4tV96dGSd8zCNY4t3YCBTubonk: time=1751821789, symbol=Unknown, name=Unknown
+2025-07-06 18:10:22,559 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9J19djRzxQLdRSK3upDnaf2ni4dgJ16HPx5SdG9zUVTu, response_code=200
+2025-07-06 18:10:22,561 - __main__ - INFO - Metadata for 9J19djRzxQLdRSK3upDnaf2ni4dgJ16HPx5SdG9zUVTu: time=1751821788, symbol=Unknown, name=Unknown
+2025-07-06 18:10:22,939 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=ELut3kZqwB45qEEU6QwB1yJrYFcVeLdjNqwGnhgbonk, response_code=200
+2025-07-06 18:10:22,941 - __main__ - INFO - Metadata for ELut3kZqwB45qEEU6QwB1yJrYFcVeLdjNqwGnhgbonk: time=1751821788, symbol=Unknown, name=Unknown
+2025-07-06 18:10:23,390 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9tq33rQRh1ioFoZfkrHFuyHauS8ht1WaN8i8SAJDMsJj, response_code=200
+2025-07-06 18:10:23,392 - __main__ - INFO - Metadata for 9tq33rQRh1ioFoZfkrHFuyHauS8ht1WaN8i8SAJDMsJj: time=1751821785, symbol=Unknown, name=Unknown
+2025-07-06 18:10:23,834 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=Bt8JSWBBvtLVmphpjcGMWJvCoUgMrtatto1eWYgQqN4Z, response_code=200
+2025-07-06 18:10:23,836 - __main__ - INFO - Metadata for Bt8JSWBBvtLVmphpjcGMWJvCoUgMrtatto1eWYgQqN4Z: time=1751821747, symbol=Unknown, name=Unknown
+2025-07-06 18:10:24,251 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=GxXUdGR5ABdHU3qcE8x4kaqR7oMvfgmYvbtJWMiNE1uo, response_code=200
+2025-07-06 18:10:24,253 - __main__ - INFO - Metadata for GxXUdGR5ABdHU3qcE8x4kaqR7oMvfgmYvbtJWMiNE1uo: time=1751820729, symbol=Unknown, name=Unknown
+2025-07-06 18:10:24,656 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263, response_code=200
+2025-07-06 18:10:24,664 - __main__ - ERROR - Birdeye mint time error for DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "c:\Users\Chaz\Documents\Newbot57.py", line 171, in get_mint_time
+    block_unix_time = data.get("data", {}).get("blockUnixTime")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-07-06 18:10:24,935 - __main__ - INFO - Dexscreener request: https://api.dexscreener.com/latest/dex/tokens/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263, response_code=200
+2025-07-06 18:10:24,942 - __main__ - INFO - Metadata for DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263: time=1715334272, symbol=Unknown, name=Unknown
+2025-07-06 18:10:25,353 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi, response_code=200
+2025-07-06 18:10:25,356 - __main__ - INFO - Metadata for 5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi: time=1751807155, symbol=Unknown, name=Unknown
+2025-07-06 18:10:25,763 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk, response_code=200
+2025-07-06 18:10:25,765 - __main__ - ERROR - Birdeye mint time error for 31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "c:\Users\Chaz\Documents\Newbot57.py", line 171, in get_mint_time
+    block_unix_time = data.get("data", {}).get("blockUnixTime")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-07-06 18:10:26,418 - __main__ - INFO - Dexscreener request: https://api.dexscreener.com/latest/dex/tokens/31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk, response_code=200
+2025-07-06 18:10:26,421 - __main__ - INFO - Metadata for 31k88G5Mq7ptbRDf3AM13HAq6wRQHXHikR8hik7wPygk: time=1676008091, symbol=Unknown, name=Unknown
+2025-07-06 18:10:26,816 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J, response_code=200
+2025-07-06 18:10:26,825 - __main__ - INFO - Metadata for Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J: time=1751817547, symbol=Unknown, name=Unknown
+2025-07-06 18:10:27,248 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe, response_code=200
+2025-07-06 18:10:27,256 - __main__ - INFO - Metadata for 9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe: time=1751817812, symbol=Unknown, name=Unknown
+2025-07-06 18:10:27,674 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V, response_code=200
+2025-07-06 18:10:27,677 - __main__ - INFO - Metadata for HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V: time=1751818509, symbol=Unknown, name=Unknown
+2025-07-06 18:10:28,133 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL, response_code=200
+2025-07-06 18:10:28,135 - __main__ - INFO - Metadata for 8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL: time=1751735670, symbol=Unknown, name=Unknown
+2025-07-06 18:10:28,596 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP, response_code=200
+2025-07-06 18:10:28,599 - __main__ - INFO - Metadata for 9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP: time=1751818186, symbol=Unknown, name=Unknown
+2025-07-06 18:10:29,039 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9wK8yN6iz1ie5kEJkvZCTxyN1x5sTdNfx8yeMY8Ebonk, response_code=200
+2025-07-06 18:10:29,041 - __main__ - INFO - Metadata for 9wK8yN6iz1ie5kEJkvZCTxyN1x5sTdNfx8yeMY8Ebonk: time=1745612599, symbol=Unknown, name=Unknown
+2025-07-06 18:10:29,464 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk, response_code=200
+2025-07-06 18:10:29,466 - __main__ - INFO - Metadata for 6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk: time=1751784483, symbol=Unknown, name=Unknown
+2025-07-06 18:10:29,879 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups, response_code=200
+2025-07-06 18:10:29,887 - __main__ - INFO - Metadata for BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups: time=1751515880, symbol=Unknown, name=Unknown
+2025-07-06 18:10:30,660 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd, response_code=200
+2025-07-06 18:10:30,662 - __main__ - INFO - Metadata for 9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd: time=1751819261, symbol=Unknown, name=Unknown
+2025-07-06 18:10:31,345 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=AtortPA9SVbkKmdzu5zg4jxgkR4howvPshorA9jYbonk, response_code=200
+2025-07-06 18:10:31,347 - __main__ - INFO - Metadata for AtortPA9SVbkKmdzu5zg4jxgkR4howvPshorA9jYbonk: time=1747030859, symbol=Unknown, name=Unknown
+2025-07-06 18:10:31,748 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk, response_code=200
+2025-07-06 18:10:31,750 - __main__ - INFO - Metadata for 83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk: time=1751611293, symbol=Unknown, name=Unknown
+2025-07-06 18:10:32,160 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=CN162nCPpq3DxPCyKLbAvEJeB1aCxsnVTEG4ZU8vpump, response_code=200
+2025-07-06 18:10:32,163 - __main__ - INFO - Metadata for CN162nCPpq3DxPCyKLbAvEJeB1aCxsnVTEG4ZU8vpump: time=1738077737, symbol=Unknown, name=Unknown
+2025-07-06 18:10:32,596 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk, response_code=200
+2025-07-06 18:10:32,599 - __main__ - INFO - Metadata for 2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk: time=1751754550, symbol=Unknown, name=Unknown
+2025-07-06 18:10:33,023 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=CDBdbNqmrLu1PcgjrFG52yxg71QnFhBZcUE6PSFdbonk, response_code=200
+2025-07-06 18:10:33,025 - __main__ - INFO - Metadata for CDBdbNqmrLu1PcgjrFG52yxg71QnFhBZcUE6PSFdbonk: time=1745605162, symbol=Unknown, name=Unknown
+2025-07-06 18:10:33,396 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=HtTYHz1Kf3rrQo6AqDLmss7gq5WrkWAaXn3tupUZbonk, response_code=200
+2025-07-06 18:10:33,399 - __main__ - INFO - Metadata for HtTYHz1Kf3rrQo6AqDLmss7gq5WrkWAaXn3tupUZbonk: time=1747141893, symbol=Unknown, name=Unknown
+2025-07-06 18:10:33,840 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk, response_code=200
+2025-07-06 18:10:33,842 - __main__ - INFO - Metadata for 6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk: time=1749665511, symbol=Unknown, name=Unknown
+2025-07-06 18:10:34,298 - __main__ - INFO - Birdeye token creation request: https://public-api.birdeye.so/defi/token_creation_info?address=34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump, response_code=200
+2025-07-06 18:10:34,301 - __main__ - INFO - Metadata for 34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump: time=1751732871, symbol=Unknown, name=Unknown
+2025-07-06 18:10:34,310 - __main__ - INFO - Fetched 39 trades from Birdeye
+2025-07-06 18:10:34,814 - __main__ - INFO - Alert sent for 9kW58Uj1U7kA3r3e3qV6z3z3
+2025-07-06 18:10:34,953 - __main__ - INFO - Alert sent for 5fa4MKgSRGsyzd45JVqCyzMQR8Dw1ymX9g9G8FEkzCMi
+2025-07-06 18:10:35,032 - __main__ - INFO - Alert sent for Cx9raNtYDq16hPgyB15VFpuunKmB6vmtnaEoHeFiyT4J
+2025-07-06 18:10:35,102 - __main__ - INFO - Alert sent for 9SqovomE3fetyexg1AGHtTpGjbSd33GruCojAdEKkfPe
+2025-07-06 18:10:35,181 - __main__ - INFO - Alert sent for HJb355LsmvdGF7n61QkxodAYMWzGHE9q6KKvrSgrQS3V
+2025-07-06 18:10:35,332 - __main__ - INFO - Alert sent for 8WctybcCjgGKDLEhE7hVD4uoCiXdmgcZ3UvCrEtgKfiL
+2025-07-06 18:10:35,454 - __main__ - INFO - Alert sent for 9Z5uRV6MARAgK7jS8c4HcT8vK3gXcSSn6vmXiDUVPUMP
+2025-07-06 18:10:35,545 - __main__ - INFO - Alert sent for 6XLSXS1HDXsTbq53onqAUeCqU6fxuMSgu7JkfZ9kbonk
+2025-07-06 18:10:35,640 - __main__ - INFO - Alert sent for BFgdzMkTPdKKJeTipv2njtDEwhKxkgFueJQfJGt1jups
+2025-07-06 18:10:35,712 - __main__ - INFO - Alert sent for 9i4j1Wrr9DyUPTannxRP1JsPzmThTAbnxGFQFZPw8wxd
+2025-07-06 18:10:35,810 - __main__ - INFO - Alert sent for 83kGGSggYGP2ZEEyvX54SkZR1kFn84RgGCDyptbDbonk
+2025-07-06 18:10:35,910 - __main__ - INFO - Alert sent for 2V8PRD7zyTiztJaTN8CGaEVmFaijc3ckX9vjiW2tbonk
+2025-07-06 18:10:36,012 - __main__ - INFO - Alert sent for 6Gci64E133ZSQ8VCMrfWQb9ekVNAwHzRobqt4vkjbonk
+2025-07-06 18:10:36,092 - __main__ - INFO - Alert sent for 34VWJ7PPwcPpYEqTGJQXo8qaMJYoP8VKuBGHPG3ypump
+2025-07-06 19:14:14,134 - __main__ - INFO - Bot stopped.
